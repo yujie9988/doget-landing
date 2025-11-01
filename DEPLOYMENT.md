@@ -39,7 +39,7 @@ git commit -m "Initial commit: DoGet landing page"
 
 # 創建 GitHub repo（在 GitHub 網站上創建一個新 repository）
 # 然後連接遠端倉庫
-git remote add origin https://github.com/你的用戶名/doget-landing.git
+git remote add origin https://github.com/yujie9988/doget-landing.git
 
 # 推送
 git push -u origin main

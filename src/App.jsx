@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'
+import ComparisonSection from './components/ComparisonSection'
 import DoGetSection from './components/DoGetSection'
 import ChatSection from './components/ChatSection'
 import KTVSection from './components/KTVSection'
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      <ComparisonSection />
       <DoGetSection />
       <ChatSection />
       <KTVSection />
