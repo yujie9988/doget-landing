@@ -106,14 +106,11 @@ const Hero = () => {
             {/* 中間輪播區域 */}
             <div style={{
               position: 'relative',
-              minWidth: '0',
-              flex: '1 1 auto',
-              maxWidth: 'clamp(300px, 45vw, 600px)',
+              width: 'clamp(280px, 40vw, 500px)',
               height: 'clamp(60px, 12vw, 180px)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              overflow: 'hidden',
             }}>
               <AnimatePresence mode="wait">
                 <motion.div
@@ -130,7 +127,6 @@ const Hero = () => {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
-                    textShadow: '0 2px 10px rgba(255,255,255,0.3)',
                     whiteSpace: 'nowrap',
                   }}
                 >
