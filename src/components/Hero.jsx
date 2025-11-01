@@ -2,12 +2,19 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Hero = () => {
-  const places = ['健身房', '咖啡廳', 'KTV', '圖書館', '餐廳', '電影院', '公園', '...']
+  // 將地點分組，每組兩個
+  const placeGroups = [
+    ['健身房', '咖啡廳'],
+    ['KTV', '圖書館'],
+    ['餐廳', '電影院'],
+    ['公園', '書店'],
+    ['游泳池', '...']
+  ]
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % places.length)
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % placeGroups.length)
     }, 2000) // 每2秒切換一次
 
     return () => clearInterval(interval)
@@ -86,7 +93,7 @@ const Hero = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: 'clamp(20px, 3vw, 50px)',
+              gap: 'clamp(15px, 2vw, 30px)',
               marginBottom: '60px',
               flexWrap: 'nowrap',
               maxWidth: '100%',
@@ -94,7 +101,7 @@ const Hero = () => {
           >
             {/* "Do" 大字 */}
             <div style={{
-              fontSize: 'clamp(60px, 12vw, 180px)',
+              fontSize: 'clamp(70px, 13vw, 180px)',
               fontWeight: '900',
               lineHeight: '1',
               textShadow: '0 4px 20px rgba(0,0,0,0.3)',
@@ -106,8 +113,8 @@ const Hero = () => {
             {/* 中間輪播區域 */}
             <div style={{
               position: 'relative',
-              width: 'clamp(280px, 40vw, 500px)',
-              height: 'clamp(60px, 12vw, 180px)',
+              width: 'clamp(320px, 45vw, 550px)',
+              height: 'clamp(70px, 13vw, 180px)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -121,8 +128,8 @@ const Hero = () => {
                   transition={{ duration: 0.5 }}
                   style={{
                     position: 'absolute',
-                    fontSize: 'clamp(48px, 10vw, 140px)',
-                    fontWeight: '800',
+                    fontSize: 'clamp(36px, 7vw, 100px)',
+                    fontWeight: '700',
                     background: 'linear-gradient(to right, #ffd89b, #19547b)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -130,14 +137,14 @@ const Hero = () => {
                     whiteSpace: 'nowrap',
                   }}
                 >
-                  {places[currentIndex]}
+                  {placeGroups[currentIndex][0]}、{placeGroups[currentIndex][1]}
                 </motion.div>
               </AnimatePresence>
             </div>
 
             {/* "Get" 大字 */}
             <div style={{
-              fontSize: 'clamp(60px, 12vw, 180px)',
+              fontSize: 'clamp(70px, 13vw, 180px)',
               fontWeight: '900',
               lineHeight: '1',
               textShadow: '0 4px 20px rgba(0,0,0,0.3)',
