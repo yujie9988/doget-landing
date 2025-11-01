@@ -1,0 +1,265 @@
+import React from 'react'
+import { motion } from 'framer-motion'
+
+const KTVSection = () => {
+  return (
+    <section className="section" style={{
+      backgroundColor: 'white',
+      overflow: 'hidden',
+    }}>
+      <div className="container">
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+          gap: '60px',
+          alignItems: 'center',
+        }}>
+          {/* 左側：文字內容 */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              style={{
+                display: 'inline-block',
+                backgroundColor: '#dbeafe',
+                color: '#3b82f6',
+                padding: '8px 20px',
+                borderRadius: '20px',
+                fontSize: '14px',
+                fontWeight: '600',
+                marginBottom: '20px',
+              }}
+            >
+              社群聚會
+            </motion.div>
+
+            <h2 style={{
+              fontSize: '48px',
+              marginBottom: '24px',
+              color: '#1f2937',
+            }}>
+              KTV 社群聊天
+            </h2>
+
+            <p style={{
+              fontSize: '18px',
+              color: '#6b7280',
+              marginBottom: '30px',
+              lineHeight: '1.8',
+            }}>
+              按地點分組的群聊室，與附近的朋友一起討論、分享生活。每個地點都有專屬的社群空間。
+            </p>
+
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '20px',
+            }}>
+              {[
+                { icon: '🎤', title: '按地點分組', desc: '健身房、咖啡廳各有專屬聊天室' },
+                { icon: '👥', title: '實時互動', desc: '與同一地點的用戶即時交流' },
+                { icon: '🛡️', title: '防刷屏機制', desc: '冷卻系統確保聊天質量' },
+                { icon: '🔐', title: '資格檢查', desc: '確保只有合格用戶參與討論' },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '15px',
+                  }}
+                >
+                  <div style={{
+                    fontSize: '24px',
+                    flexShrink: 0,
+                  }}>
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h4 style={{
+                      fontSize: '18px',
+                      marginBottom: '5px',
+                      color: '#1f2937',
+                    }}>
+                      {item.title}
+                    </h4>
+                    <p style={{
+                      fontSize: '16px',
+                      color: '#6b7280',
+                    }}>
+                      {item.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* 右側：群聊界面模擬 */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            style={{
+              position: 'relative',
+            }}
+          >
+            <div style={{
+              backgroundColor: 'white',
+              borderRadius: '30px',
+              padding: '30px',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.1)',
+              maxWidth: '450px',
+              margin: '0 auto',
+            }}>
+              {/* 群聊標題 */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '15px',
+                marginBottom: '25px',
+                paddingBottom: '20px',
+                borderBottom: '1px solid #e5e7eb',
+              }}>
+                <div style={{
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '50%',
+                  background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  fontSize: '24px',
+                }}>
+                  🏋️
+                </div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontSize: '18px', fontWeight: '600' }}>健身房 KTV</div>
+                  <div style={{ fontSize: '14px', color: '#6b7280' }}>128 人在線</div>
+                </div>
+              </div>
+
+              {/* 群聊消息 */}
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '20px',
+                maxHeight: '400px',
+              }}>
+                {[
+                  { user: '健身達人', avatar: '💪', msg: '今天有人要一起練腿嗎？', time: '14:30' },
+                  { user: '跑步愛好者', avatar: '🏃', msg: '我在！18:00 見', time: '14:32' },
+                  { user: '瑜伽教練', avatar: '🧘', msg: '明天早上有瑜伽課哦', time: '14:35' },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.2 + index * 0.15 }}
+                    style={{
+                      display: 'flex',
+                      gap: '12px',
+                    }}
+                  >
+                    <div style={{
+                      width: '40px',
+                      height: '40px',
+                      borderRadius: '50%',
+                      background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      fontSize: '20px',
+                      flexShrink: 0,
+                    }}>
+                      {item.avatar}
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '10px',
+                        marginBottom: '5px',
+                      }}>
+                        <span style={{ fontSize: '14px', fontWeight: '600' }}>{item.user}</span>
+                        <span style={{ fontSize: '12px', color: '#9ca3af' }}>{item.time}</span>
+                      </div>
+                      <div style={{
+                        backgroundColor: '#f3f4f6',
+                        padding: '10px 15px',
+                        borderRadius: '15px',
+                        fontSize: '15px',
+                        color: '#1f2937',
+                      }}>
+                        {item.msg}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* 在線用戶頭像 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                style={{
+                  marginTop: '25px',
+                  paddingTop: '20px',
+                  borderTop: '1px solid #e5e7eb',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                }}
+              >
+                <div style={{ fontSize: '14px', color: '#6b7280' }}>在線：</div>
+                <div style={{ display: 'flex', marginLeft: '-5px' }}>
+                  {['💪', '🏃', '🧘', '🤸', '🚴', '⛹️'].map((emoji, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: 1 + i * 0.1 }}
+                      style={{
+                        width: '32px',
+                        height: '32px',
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        border: '2px solid white',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        fontSize: '16px',
+                        marginLeft: '-8px',
+                      }}
+                    >
+                      {emoji}
+                    </motion.div>
+                  ))}
+                </div>
+                <div style={{ fontSize: '14px', color: '#6b7280', marginLeft: '5px' }}>+122</div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default KTVSection
