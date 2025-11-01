@@ -42,12 +42,13 @@ const ComparisonSection = () => {
           <p style={{
             fontSize: '20px',
             color: '#6b7280',
-            maxWidth: '700px',
+            maxWidth: '800px',
             margin: '0 auto',
             lineHeight: '1.8',
           }}>
-            市面上交友 App 不少，但 DoGet 專注於讓你遇見<strong style={{ color: '#6366f1' }}>真實的人</strong>，
-            在<strong style={{ color: '#6366f1' }}>真實的地點</strong>建立有意義的連結。
+            市面上交友 App 不少，但 DoGet 透過<strong style={{ color: '#6366f1' }}>地點配對機制</strong>，
+            讓你只遇見<strong style={{ color: '#6366f1' }}>真實存在的人</strong>。
+            不像其他 App 充斥著假帳號和詐騙訊息。
           </p>
         </motion.div>
 
@@ -82,10 +83,10 @@ const ComparisonSection = () => {
 
             {/* 比較項目 */}
             {[
-              { feature: '真實身份驗證', doget: true, others: false },
               { feature: '基於真實地點配對', doget: true, others: false },
-              { feature: '嚴格反詐騙機制', doget: true, others: false },
-              { feature: '多重安全檢查', doget: true, others: false },
+              { feature: '自動過濾假帳號', doget: true, others: false },
+              { feature: '確保用戶真實存在', doget: true, others: false },
+              { feature: '共同興趣篩選', doget: true, others: false },
               { feature: '舉報和封禁系統', doget: true, others: true },
               { feature: '實時聊天', doget: true, others: true },
             ].map((item, index) => (
@@ -146,20 +147,20 @@ const ComparisonSection = () => {
             {
               icon: '🚫',
               title: '告別假帳號和詐騙',
-              desc: '其他平台充斥大量虛假帳號、詐騙訊息和騷擾內容',
-              highlight: 'DoGet 透過地點驗證和多重檢查，確保你遇見的都是真人'
+              desc: '其他平台充斥大量虛假帳號、詐騙訊息和機器人',
+              highlight: 'DoGet 基於真實地點，詐騙者無法偽造實體位置，自然過濾假帳號'
             },
             {
               icon: '📍',
-              title: '基於真實地點',
-              desc: '傳統 App 只靠照片和文字，難以確認對方真實性',
-              highlight: 'DoGet 讓你在熟悉的健身房、咖啡廳遇見真實存在的人'
+              title: '只遇見真實存在的人',
+              desc: '傳統 App 只靠照片和文字，無法確認對方是否真實',
+              highlight: 'DoGet 的地點配對機制，確保你遇見的人真的在那個健身房、咖啡廳出現過'
             },
             {
-              icon: '🛡️',
-              title: '主動安全防護',
-              desc: '多數平台只能被動接受舉報，無法提前防範',
-              highlight: 'DoGet 主動監測異常行為，封禁機制保護用戶安全'
+              icon: '🏃',
+              title: '共同興趣的自然連結',
+              desc: '多數平台隨機配對，缺乏共同話題和興趣',
+              highlight: 'DoGet 透過地點（健身房、咖啡廳）自然篩選出有相同生活方式的人'
             },
           ].map((item, index) => (
             <motion.div
@@ -230,7 +231,7 @@ const ComparisonSection = () => {
             fontSize: '32px',
             marginBottom: '40px',
           }}>
-            DoGet 用戶體驗更安心
+            地點配對的天然優勢
           </h3>
 
           <div style={{
@@ -239,10 +240,10 @@ const ComparisonSection = () => {
             gap: '40px',
           }}>
             {[
-              { number: '0', label: '詐騙投訴', desc: '嚴格驗證機制' },
-              { number: '99.8%', label: '真實用戶', desc: '地點驗證保證' },
-              { number: '<1min', label: '異常帳號處理', desc: '即時安全監測' },
-              { number: '4.9★', label: '安全感評分', desc: '用戶真實回饋' },
+              { number: '100%', label: '真實地點', desc: '無法偽造位置' },
+              { number: '0', label: '機器人帳號', desc: '地點機制天然過濾' },
+              { number: '真實', label: '用戶存在', desc: '確實在該地點出現' },
+              { number: '共同', label: '興趣愛好', desc: '相同場所自然篩選' },
             ].map((stat, index) => (
               <motion.div
                 key={index}
