@@ -86,17 +86,19 @@ const Hero = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '30px',
+              gap: 'clamp(20px, 3vw, 50px)',
               marginBottom: '60px',
-              flexWrap: 'wrap',
+              flexWrap: 'nowrap',
+              maxWidth: '100%',
             }}
           >
             {/* "Do" 大字 */}
             <div style={{
-              fontSize: 'clamp(80px, 15vw, 180px)',
+              fontSize: 'clamp(60px, 12vw, 180px)',
               fontWeight: '900',
               lineHeight: '1',
               textShadow: '0 4px 20px rgba(0,0,0,0.3)',
+              flexShrink: 0,
             }}>
               Do
             </div>
@@ -104,11 +106,14 @@ const Hero = () => {
             {/* 中間輪播區域 */}
             <div style={{
               position: 'relative',
-              minWidth: '300px',
-              height: 'clamp(80px, 15vw, 180px)',
+              minWidth: '0',
+              flex: '1 1 auto',
+              maxWidth: 'clamp(300px, 45vw, 600px)',
+              height: 'clamp(60px, 12vw, 180px)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              overflow: 'hidden',
             }}>
               <AnimatePresence mode="wait">
                 <motion.div
@@ -119,7 +124,7 @@ const Hero = () => {
                   transition={{ duration: 0.5 }}
                   style={{
                     position: 'absolute',
-                    fontSize: 'clamp(60px, 12vw, 140px)',
+                    fontSize: 'clamp(48px, 10vw, 140px)',
                     fontWeight: '800',
                     background: 'linear-gradient(to right, #ffd89b, #19547b)',
                     WebkitBackgroundClip: 'text',
@@ -136,10 +141,11 @@ const Hero = () => {
 
             {/* "Get" 大字 */}
             <div style={{
-              fontSize: 'clamp(80px, 15vw, 180px)',
+              fontSize: 'clamp(60px, 12vw, 180px)',
               fontWeight: '900',
               lineHeight: '1',
               textShadow: '0 4px 20px rgba(0,0,0,0.3)',
+              flexShrink: 0,
             }}>
               Get
             </div>
