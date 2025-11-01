@@ -54,7 +54,8 @@ const DoGetSection = () => {
               marginBottom: '30px',
               lineHeight: '1.8',
             }}>
-              不再是無聊的滑動配對。DoGet 基於你常去的地點（健身房、咖啡廳、圖書館），智能推薦志同道合的朋友。
+              就像上學時漸漸認識隔壁同學一樣。DoGet 基於你常去的地點（健身房、咖啡廳、圖書館），
+              讓你自然地發現周遭的人。不是快速配對陌生人，而是在熟悉的場所培養真實的連結。
             </p>
 
             <div style={{
@@ -63,9 +64,9 @@ const DoGetSection = () => {
               gap: '20px',
             }}>
               {[
-                { icon: '👉', title: '左滑不喜歡，右滑喜歡', desc: '直覺的操作方式' },
-                { icon: '📍', title: '基於地點發現', desc: '在健身房、咖啡廳遇見有緣人' },
-                { icon: '💎', title: '金幣系統', desc: '使用金幣解鎖更多功能' },
+                { icon: '📍', title: '在熟悉的場所相遇', desc: '健身房、咖啡廳、圖書館，自然認識身邊的人' },
+                { icon: '🎓', title: '像同學一樣漸漸熟悉', desc: '不急於一時，培養真實的了解和信任' },
+                { icon: '💝', title: '日久生情的連結', desc: '相同地點重複出現，建立自然的熟悉感' },
               ].map((item, index) => (
                 <motion.div
                   key={index}

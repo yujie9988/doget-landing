@@ -46,9 +46,10 @@ const ComparisonSection = () => {
             margin: '0 auto',
             lineHeight: '1.8',
           }}>
-            市面上交友 App 不少，但 DoGet 透過<strong style={{ color: '#6366f1' }}>地點配對機制</strong>，
-            讓你只遇見<strong style={{ color: '#6366f1' }}>真實存在的人</strong>。
-            不像其他 App 充斥著假帳號和詐騙訊息。
+            還記得上學時，和坐隔壁的同學從陌生到熟悉的過程嗎？<br />
+            DoGet 透過<strong style={{ color: '#6366f1' }}>地點配對機制</strong>，
+            讓你在熟悉的健身房、咖啡廳，<strong style={{ color: '#6366f1' }}>自然地認識身邊的人</strong>。<br />
+            不像其他 App 充斥著假帳號和詐騙訊息，而是真實的、日久生情的連結。
           </p>
         </motion.div>
 
@@ -145,22 +146,22 @@ const ComparisonSection = () => {
         }}>
           {[
             {
+              icon: '🎓',
+              title: '像上學時認識同學一樣',
+              desc: '其他 App 像盲目約會，配對陌生人後才開始聊天',
+              highlight: 'DoGet 讓你在熟悉的場所（健身房、咖啡廳）自然認識周遭的人，就像在教室裡漸漸熟悉身邊的同學'
+            },
+            {
+              icon: '💝',
+              title: '日久生情的真實連結',
+              desc: '傳統 App 快速配對，缺乏了解和信任的過程',
+              highlight: 'DoGet 透過相同地點的重複出現，建立自然的熟悉感。不急於一時，而是培養真正的連結'
+            },
+            {
               icon: '🚫',
-              title: '告別假帳號和詐騙',
-              desc: '其他平台充斥大量虛假帳號、詐騙訊息和機器人',
-              highlight: 'DoGet 基於真實地點，詐騙者無法偽造實體位置，自然過濾假帳號'
-            },
-            {
-              icon: '📍',
-              title: '只遇見真實存在的人',
-              desc: '傳統 App 只靠照片和文字，無法確認對方是否真實',
-              highlight: 'DoGet 的地點配對機制，確保你遇見的人真的在那個健身房、咖啡廳出現過'
-            },
-            {
-              icon: '🏃',
-              title: '共同興趣的自然連結',
-              desc: '多數平台隨機配對，缺乏共同話題和興趣',
-              highlight: 'DoGet 透過地點（健身房、咖啡廳）自然篩選出有相同生活方式的人'
+              title: '天然過濾假帳號',
+              desc: '其他平台充斥虛假帳號、詐騙訊息和機器人',
+              highlight: '詐騙者無法偽造真實地點，DoGet 的地點機制自然過濾掉所有假帳號和機器人'
             },
           ].map((item, index) => (
             <motion.div
@@ -231,7 +232,7 @@ const ComparisonSection = () => {
             fontSize: '32px',
             marginBottom: '40px',
           }}>
-            地點配對的天然優勢
+            回歸最自然的認識方式
           </h3>
 
           <div style={{
@@ -240,10 +241,10 @@ const ComparisonSection = () => {
             gap: '40px',
           }}>
             {[
-              { number: '100%', label: '真實地點', desc: '無法偽造位置' },
-              { number: '0', label: '機器人帳號', desc: '地點機制天然過濾' },
+              { number: '熟悉', label: '場所相遇', desc: '像在教室裡認識同學' },
+              { number: '自然', label: '培養感情', desc: '日久生情的過程' },
               { number: '真實', label: '用戶存在', desc: '確實在該地點出現' },
-              { number: '共同', label: '興趣愛好', desc: '相同場所自然篩選' },
+              { number: '0', label: '假帳號', desc: '地點機制天然過濾' },
             ].map((stat, index) => (
               <motion.div
                 key={index}
