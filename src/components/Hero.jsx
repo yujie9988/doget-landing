@@ -113,8 +113,8 @@ const Hero = () => {
             {/* 中間輪播區域 */}
             <div style={{
               position: 'relative',
-              width: 'clamp(320px, 45vw, 550px)',
-              height: 'clamp(70px, 13vw, 180px)',
+              width: 'clamp(250px, 35vw, 450px)',
+              height: 'clamp(140px, 26vw, 360px)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -128,6 +128,13 @@ const Hero = () => {
                   transition={{ duration: 0.5 }}
                   style={{
                     position: 'absolute',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '10px',
+                  }}
+                >
+                  <div style={{
                     fontSize: 'clamp(36px, 7vw, 100px)',
                     fontWeight: '700',
                     background: 'linear-gradient(to right, #ffd89b, #19547b)',
@@ -135,9 +142,22 @@ const Hero = () => {
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
                     whiteSpace: 'nowrap',
-                  }}
-                >
-                  {placeGroups[currentIndex][0]}、{placeGroups[currentIndex][1]}
+                    lineHeight: '1.2',
+                  }}>
+                    {placeGroups[currentIndex][0]}
+                  </div>
+                  <div style={{
+                    fontSize: 'clamp(36px, 7vw, 100px)',
+                    fontWeight: '700',
+                    background: 'linear-gradient(to right, #ffd89b, #19547b)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    whiteSpace: 'nowrap',
+                    lineHeight: '1.2',
+                  }}>
+                    {placeGroups[currentIndex][1]}
+                  </div>
                 </motion.div>
               </AnimatePresence>
             </div>
