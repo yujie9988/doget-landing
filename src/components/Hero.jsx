@@ -1,7 +1,18 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const Hero = () => {
+  const places = ['健身房', '咖啡廳', 'KTV', '圖書館', '餐廳', '電影院', '公園', '...']
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % places.length)
+    }, 2000) // 每2秒切換一次
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section style={{
       minHeight: '100vh',
@@ -66,19 +77,73 @@ const Hero = () => {
             color: 'white',
           }}
         >
-          <motion.h1
+          {/* Tinder 風格的主標題 */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             style={{
-              fontSize: '64px',
-              marginBottom: '24px',
-              fontWeight: '800',
-              lineHeight: '1.2',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '30px',
+              marginBottom: '60px',
+              flexWrap: 'wrap',
             }}
           >
-            發現身邊的<br />美好連結
-          </motion.h1>
+            {/* "Do" 大字 */}
+            <div style={{
+              fontSize: 'clamp(80px, 15vw, 180px)',
+              fontWeight: '900',
+              lineHeight: '1',
+              textShadow: '0 4px 20px rgba(0,0,0,0.3)',
+            }}>
+              Do
+            </div>
+
+            {/* 中間輪播區域 */}
+            <div style={{
+              position: 'relative',
+              minWidth: '300px',
+              height: 'clamp(80px, 15vw, 180px)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -50, opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  style={{
+                    position: 'absolute',
+                    fontSize: 'clamp(60px, 12vw, 140px)',
+                    fontWeight: '800',
+                    background: 'linear-gradient(to right, #ffd89b, #19547b)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    textShadow: '0 2px 10px rgba(255,255,255,0.3)',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {places[currentIndex]}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* "Get" 大字 */}
+            <div style={{
+              fontSize: 'clamp(80px, 15vw, 180px)',
+              fontWeight: '900',
+              lineHeight: '1',
+              textShadow: '0 4px 20px rgba(0,0,0,0.3)',
+            }}>
+              Get
+            </div>
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -92,7 +157,7 @@ const Hero = () => {
               margin: '0 auto 40px',
             }}
           >
-            基於地點的智能配對，在健身房、咖啡廳遇見志同道合的朋友
+            基於地點的智能配對，在各種場合遇見志同道合的朋友
           </motion.p>
 
           <motion.div
