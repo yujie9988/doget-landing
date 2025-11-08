@@ -1,29 +1,16 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Features from './components/Features'
-import ComparisonSection from './components/ComparisonSection'
-import DoGetSection from './components/DoGetSection'
-import ChatSection from './components/ChatSection'
-import KTVSection from './components/KTVSection'
-import GameSection from './components/GameSection'
-import DownloadCTA from './components/DownloadCTA'
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './components/HomePage'
+import FeaturesPage from './components/FeaturesPage'
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <Features />
-      <ComparisonSection />
-      <DoGetSection />
-      <ChatSection />
-      <KTVSection />
-      <GameSection />
-      <DownloadCTA />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/features" element={<FeaturesPage />} />
+      </Routes>
+    </Router>
   )
 }
 

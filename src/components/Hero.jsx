@@ -6,9 +6,7 @@ const Hero = () => {
   const placeGroups = [
     ['健身房', '咖啡廳'],
     ['KTV', '圖書館'],
-    ['餐廳', '電影院'],
-    ['公園', '書店'],
-    ['游泳池', '...']
+    ['...']
   ]
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -25,54 +23,23 @@ const Hero = () => {
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
+      backgroundImage: 'url(/PageImage/indexpage.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* 背景動畫元素 */}
-      <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          rotate: [0, 180, 360],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        style={{
-          position: 'absolute',
-          top: '-10%',
-          right: '-10%',
-          width: '500px',
-          height: '500px',
-          borderRadius: '50%',
-          background: 'rgba(255, 255, 255, 0.1)',
-          filter: 'blur(40px)',
-        }}
-      />
-
-      <motion.div
-        animate={{
-          scale: [1, 1.3, 1],
-          rotate: [360, 180, 0],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        style={{
-          position: 'absolute',
-          bottom: '-10%',
-          left: '-5%',
-          width: '400px',
-          height: '400px',
-          borderRadius: '50%',
-          background: 'rgba(255, 255, 255, 0.1)',
-          filter: 'blur(40px)',
-        }}
-      />
+      {/* 半透明遮罩層，讓文字更清晰 */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+        zIndex: 0,
+      }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div
@@ -137,27 +104,23 @@ const Hero = () => {
                   <div style={{
                     fontSize: 'clamp(36px, 7vw, 100px)',
                     fontWeight: '700',
-                    background: 'linear-gradient(to right, #ffd89b, #19547b)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
+                    color: 'white',
                     whiteSpace: 'nowrap',
                     lineHeight: '1.2',
                   }}>
                     {placeGroups[currentIndex][0]}
                   </div>
-                  <div style={{
-                    fontSize: 'clamp(36px, 7vw, 100px)',
-                    fontWeight: '700',
-                    background: 'linear-gradient(to right, #ffd89b, #19547b)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                    whiteSpace: 'nowrap',
-                    lineHeight: '1.2',
-                  }}>
-                    {placeGroups[currentIndex][1]}
-                  </div>
+                  {placeGroups[currentIndex][1] && (
+                    <div style={{
+                      fontSize: 'clamp(36px, 7vw, 100px)',
+                      fontWeight: '700',
+                      color: 'white',
+                      whiteSpace: 'nowrap',
+                      lineHeight: '1.2',
+                    }}>
+                      {placeGroups[currentIndex][1]}
+                    </div>
+                  )}
                 </motion.div>
               </AnimatePresence>
             </div>

@@ -68,7 +68,7 @@ const Navbar = () => {
           gap: '40px',
           alignItems: 'center',
         }}>
-          <a href="#features" style={{
+          <a href="/" style={{
             color: '#ffffff',
             fontWeight: '500',
             fontSize: '15px',
@@ -78,9 +78,9 @@ const Navbar = () => {
           }}
           onMouseEnter={(e) => e.target.style.opacity = '1'}
           onMouseLeave={(e) => e.target.style.opacity = '0.9'}
-          >功能</a>
+          >首頁</a>
 
-          <a href="#doget" style={{
+          <a href="/features" style={{
             color: '#ffffff',
             fontWeight: '500',
             fontSize: '15px',
@@ -90,19 +90,7 @@ const Navbar = () => {
           }}
           onMouseEnter={(e) => e.target.style.opacity = '1'}
           onMouseLeave={(e) => e.target.style.opacity = '0.9'}
-          >配對</a>
-
-          <a href="#chat" style={{
-            color: '#ffffff',
-            fontWeight: '500',
-            fontSize: '15px',
-            textDecoration: 'none',
-            transition: 'opacity 0.2s',
-            opacity: 0.9,
-          }}
-          onMouseEnter={(e) => e.target.style.opacity = '1'}
-          onMouseLeave={(e) => e.target.style.opacity = '0.9'}
-          >聊天</a>
+          >功能介紹</a>
 
           <a href="#download" style={{
             backgroundColor: '#ffffff',
