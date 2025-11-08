@@ -16,9 +16,65 @@ const ThirdSection = () => {
           gap: '60px',
           alignItems: 'center',
         }}>
-          {/* 左側：文字內容 */}
+          {/* 左側：YouTube 影片位置 */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            style={{
+              position: 'relative',
+            }}
+          >
+            {/* YouTube 影片容器 - 16:9 比例 */}
+            <div style={{
+              position: 'relative',
+              paddingBottom: '56.25%', // 16:9 比例
+              height: 0,
+              overflow: 'hidden',
+              borderRadius: '20px',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
+              backgroundColor: '#f3f4f6',
+            }}>
+              {/* 請在這裡放入您的 YouTube iframe */}
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#9ca3af',
+                fontSize: '18px',
+              }}>
+                YouTube 影片位置
+              </div>
+              {/*
+              範例 YouTube iframe:
+              <iframe
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 'none',
+                  borderRadius: '20px',
+                }}
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+              */}
+            </div>
+          </motion.div>
+
+          {/* 右側：文字內容 */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -71,7 +127,7 @@ const ThirdSection = () => {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -30 }}
+                  initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
@@ -104,62 +160,6 @@ const ThirdSection = () => {
                   </div>
                 </motion.div>
               ))}
-            </div>
-          </motion.div>
-
-          {/* 右側：YouTube 影片位置 */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            style={{
-              position: 'relative',
-            }}
-          >
-            {/* YouTube 影片容器 - 16:9 比例 */}
-            <div style={{
-              position: 'relative',
-              paddingBottom: '56.25%', // 16:9 比例
-              height: 0,
-              overflow: 'hidden',
-              borderRadius: '20px',
-              boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
-              backgroundColor: '#f3f4f6',
-            }}>
-              {/* 請在這裡放入您的 YouTube iframe */}
-              <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#9ca3af',
-                fontSize: '18px',
-              }}>
-                YouTube 影片位置
-              </div>
-              {/*
-              範例 YouTube iframe:
-              <iframe
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                  border: 'none',
-                  borderRadius: '20px',
-                }}
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-              */}
             </div>
           </motion.div>
         </div>
