@@ -61,7 +61,7 @@ const Hero = () => {
               alignItems: 'center',
               justifyContent: 'center',
               gap: 'clamp(10px, 1.5vw, 20px)',
-              marginBottom: '100px',
+              marginBottom: '10px',
               flexWrap: 'nowrap',
               maxWidth: '100%',
             }}
