@@ -22,9 +22,8 @@ const Hero = () => {
     <section style={{
       minHeight: '100vh',
       display: 'flex',
-      alignItems: 'flex-end',
+      alignItems: 'center',
       justifyContent: 'center',
-      paddingBottom: '100px',
       backgroundImage: 'url(/PageImage/mainpage.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
