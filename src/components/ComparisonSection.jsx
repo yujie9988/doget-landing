@@ -1,7 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext'
+import { getTranslation } from '../locales'
 
 const ComparisonSection = () => {
+  const { language } = useLanguage()
+  const t = getTranslation(language)
+
   return (
     <section className="section" style={{
       backgroundColor: 'white',
@@ -28,7 +33,7 @@ const ComparisonSection = () => {
               marginBottom: '20px',
             }}
           >
-            🛡️
+            {t.comparisonSection.icon}
           </motion.div>
 
           <h2 style={{
@@ -36,7 +41,7 @@ const ComparisonSection = () => {
             marginBottom: '20px',
             color: '#1f2937',
           }}>
-            為何選擇 DoGet？
+            {t.comparisonSection.title}
           </h2>
 
           <p style={{
@@ -46,10 +51,10 @@ const ComparisonSection = () => {
             margin: '0 auto',
             lineHeight: '1.8',
           }}>
-            還記得上學時，和坐隔壁的同學從陌生到熟悉的過程嗎？<br />
-            DoGet 透過<strong style={{ color: '#6366f1' }}>地點配對機制</strong>，
-            讓你在熟悉的健身房、咖啡廳，<strong style={{ color: '#6366f1' }}>自然地認識身邊的人</strong>。<br />
-            不像其他 App 充斥著假帳號和詐騙訊息，而是真實的、日久生情的連結。
+            {t.comparisonSection.description}<br />
+            {t.comparisonSection.descriptionHighlight1}<strong style={{ color: '#6366f1' }}>{t.comparisonSection.descriptionBold1}</strong>
+            {t.comparisonSection.descriptionHighlight2}<strong style={{ color: '#6366f1' }}>{t.comparisonSection.descriptionBold2}</strong>
+            {t.comparisonSection.descriptionHighlight3}
           </p>
         </motion.div>
 
@@ -75,21 +80,21 @@ const ComparisonSection = () => {
             alignItems: 'center',
           }}>
             {/* 表頭 */}
-            <div style={{ fontSize: '18px', fontWeight: '600', color: '#6b7280' }}>功能特色</div>
-            <div style={{ fontSize: '18px', fontWeight: '700', color: '#6366f1', textAlign: 'center' }}>DoGet</div>
-            <div style={{ fontSize: '18px', fontWeight: '600', color: '#9ca3af', textAlign: 'center' }}>其他 App</div>
+            <div style={{ fontSize: '18px', fontWeight: '600', color: '#6b7280' }}>{t.comparisonSection.tableHeader}</div>
+            <div style={{ fontSize: '18px', fontWeight: '700', color: '#6366f1', textAlign: 'center' }}>{t.comparisonSection.doget}</div>
+            <div style={{ fontSize: '18px', fontWeight: '600', color: '#9ca3af', textAlign: 'center' }}>{t.comparisonSection.others}</div>
 
             {/* 分隔線 */}
             <div style={{ gridColumn: '1 / -1', height: '1px', backgroundColor: '#e5e7eb', margin: '10px 0' }} />
 
             {/* 比較項目 */}
             {[
-              { feature: '基於真實地點配對', doget: true, others: false },
-              { feature: '自動過濾假帳號', doget: true, others: false },
-              { feature: '確保用戶真實存在', doget: true, others: false },
-              { feature: '共同興趣篩選', doget: true, others: false },
-              { feature: '舉報和封禁系統', doget: true, others: true },
-              { feature: '實時聊天', doget: true, others: true },
+              { feature: t.comparisonSection.features.location, doget: true, others: false },
+              { feature: t.comparisonSection.features.filterFake, doget: true, others: false },
+              { feature: t.comparisonSection.features.realUsers, doget: true, others: false },
+              { feature: t.comparisonSection.features.interests, doget: true, others: false },
+              { feature: t.comparisonSection.features.report, doget: true, others: true },
+              { feature: t.comparisonSection.features.chat, doget: true, others: true },
             ].map((item, index) => (
               <React.Fragment key={index}>
                 <motion.div
@@ -145,24 +150,9 @@ const ComparisonSection = () => {
           marginBottom: '40px',
         }}>
           {[
-            {
-              icon: '🎓',
-              title: '像上學時認識同學一樣',
-              desc: '其他 App 像盲目約會，配對陌生人後才開始聊天',
-              highlight: 'DoGet 讓你在熟悉的場所（健身房、咖啡廳）自然認識周遭的人，就像在教室裡漸漸熟悉身邊的同學'
-            },
-            {
-              icon: '💝',
-              title: '日久生情的真實連結',
-              desc: '傳統 App 快速配對，缺乏了解和信任的過程',
-              highlight: 'DoGet 透過相同地點的重複出現，建立自然的熟悉感。不急於一時，而是培養真正的連結'
-            },
-            {
-              icon: '🚫',
-              title: '天然過濾假帳號',
-              desc: '其他平台充斥虛假帳號、詐騙訊息和機器人',
-              highlight: '詐騙者無法偽造真實地點，DoGet 的地點機制自然過濾掉所有假帳號和機器人'
-            },
+            t.comparisonSection.highlights.classmate,
+            t.comparisonSection.highlights.connection,
+            t.comparisonSection.highlights.noFake,
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -232,7 +222,7 @@ const ComparisonSection = () => {
             fontSize: '32px',
             marginBottom: '40px',
           }}>
-            回歸最自然的認識方式
+            {t.comparisonSection.stats.title}
           </h3>
 
           <div style={{
@@ -241,10 +231,10 @@ const ComparisonSection = () => {
             gap: '40px',
           }}>
             {[
-              { number: '熟悉', label: '場所相遇', desc: '像在教室裡認識同學' },
-              { number: '自然', label: '培養感情', desc: '日久生情的過程' },
-              { number: '真實', label: '用戶存在', desc: '確實在該地點出現' },
-              { number: '0', label: '假帳號', desc: '地點機制天然過濾' },
+              t.comparisonSection.stats.familiar,
+              t.comparisonSection.stats.natural,
+              t.comparisonSection.stats.real,
+              t.comparisonSection.stats.zero,
             ].map((stat, index) => (
               <motion.div
                 key={index}

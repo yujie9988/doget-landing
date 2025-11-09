@@ -1,7 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext'
+import { getTranslation } from '../locales'
 
 const SecondSection = () => {
+  const { language } = useLanguage()
+  const t = getTranslation(language)
+
   return (
     <section className="section" style={{
       backgroundColor: '#ffffff',
@@ -41,7 +46,7 @@ const SecondSection = () => {
                 marginBottom: '20px',
               }}
             >
-              功能介紹
+              {t.secondSection.badge}
             </motion.div>
 
             <h2 style={{
@@ -49,7 +54,7 @@ const SecondSection = () => {
               marginBottom: '24px',
               color: '#1f2937',
             }}>
-              探索更多功能
+              {t.secondSection.title}
             </h2>
 
             <p style={{
@@ -58,7 +63,7 @@ const SecondSection = () => {
               marginBottom: '30px',
               lineHeight: '1.8',
             }}>
-              透過影片了解 DoGet 如何幫助您在各種場合結識新朋友，打造專屬於您的社交圈。
+              {t.secondSection.description}
             </p>
 
             <div style={{
@@ -67,9 +72,9 @@ const SecondSection = () => {
               gap: '20px',
             }}>
               {[
-                { icon: '🎯', title: '精準配對', desc: '基於地點和興趣的智能推薦' },
-                { icon: '🔒', title: '隱私保護', desc: '完整的隱私控制與安全機制' },
-                { icon: '⚡', title: '即時互動', desc: '流暢的社交體驗' },
+                t.secondSection.features.targeting,
+                t.secondSection.features.privacy,
+                t.secondSection.features.interaction,
               ].map((item, index) => (
                 <motion.div
                   key={index}

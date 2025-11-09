@@ -1,7 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext'
+import { getTranslation } from '../locales'
 
 const ThirdSection = () => {
+  const { language } = useLanguage()
+  const t = getTranslation(language)
+
   return (
     <section className="section" style={{
       backgroundColor: '#f9fafb',
@@ -97,7 +102,7 @@ const ThirdSection = () => {
                 marginBottom: '20px',
               }}
             >
-              使用教學
+              {t.thirdSection.badge}
             </motion.div>
 
             <h2 style={{
@@ -105,7 +110,7 @@ const ThirdSection = () => {
               marginBottom: '24px',
               color: '#1f2937',
             }}>
-              簡單易用
+              {t.thirdSection.title}
             </h2>
 
             <p style={{
@@ -114,7 +119,7 @@ const ThirdSection = () => {
               marginBottom: '30px',
               lineHeight: '1.8',
             }}>
-              快速上手 DoGet，開始您的社交旅程。無論是新手還是資深用戶，都能找到適合的功能。
+              {t.thirdSection.description}
             </p>
 
             <div style={{
@@ -123,9 +128,9 @@ const ThirdSection = () => {
               gap: '20px',
             }}>
               {[
-                { icon: '1️⃣', title: '註冊帳號', desc: '快速完成註冊，建立個人檔案' },
-                { icon: '2️⃣', title: '設定興趣', desc: '選擇您喜歡的場所和活動' },
-                { icon: '3️⃣', title: '開始配對', desc: '在附近場所遇見新朋友' },
+                t.thirdSection.steps.register,
+                t.thirdSection.steps.interests,
+                t.thirdSection.steps.matching,
               ].map((item, index) => (
                 <motion.div
                   key={index}

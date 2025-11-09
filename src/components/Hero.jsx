@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext'
+import { getTranslation } from '../locales'
 
 const Hero = () => {
+  const { language } = useLanguage()
+  const t = getTranslation(language)
+
   // 將地點分組，每組兩個
   const placeGroups = [
-    ['健身房', '咖啡廳'],
-    ['KTV', '圖書館'],
-    ['...']
+    [t.hero.places.gym, t.hero.places.cafe],
+    [t.hero.places.ktv, t.hero.places.library],
+    [t.hero.places.more]
   ]
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -180,7 +185,7 @@ const Hero = () => {
               textAlign: 'center',
             }}
           >
-            基於地點的智能配對，在各種場合遇見志同道合的朋友
+            {t.hero.subtitle}
           </motion.p>
 
           <motion.div
@@ -209,7 +214,7 @@ const Hero = () => {
                 boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
               }}
             >
-              App Store 下載
+              {t.hero.appStore}
             </motion.button>
 
             <motion.button
@@ -226,7 +231,7 @@ const Hero = () => {
                 backdropFilter: 'blur(10px)',
               }}
             >
-              Google Play 下載
+              {t.hero.googlePlay}
             </motion.button>
           </motion.div>
         </motion.div>

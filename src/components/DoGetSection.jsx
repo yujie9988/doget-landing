@@ -1,7 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext'
+import { getTranslation } from '../locales'
 
 const DoGetSection = () => {
+  const { language } = useLanguage()
+  const t = getTranslation(language)
+
   return (
     <section id="doget" className="section" style={{
       backgroundColor: 'white',
@@ -37,7 +42,7 @@ const DoGetSection = () => {
                 marginBottom: '20px',
               }}
             >
-              核心功能
+              {t.dogetSection.badge}
             </motion.div>
 
             <h2 style={{
@@ -45,7 +50,7 @@ const DoGetSection = () => {
               marginBottom: '24px',
               color: '#1f2937',
             }}>
-              DoGet 智能配對
+              {t.dogetSection.title}
             </h2>
 
             <p style={{
@@ -54,8 +59,7 @@ const DoGetSection = () => {
               marginBottom: '30px',
               lineHeight: '1.8',
             }}>
-              就像上學時漸漸認識隔壁同學一樣。DoGet 基於你常去的地點（健身房、咖啡廳、圖書館），
-              讓你自然地發現周遭的人。不是快速配對陌生人，而是在熟悉的場所培養真實的連結。
+              {t.dogetSection.description}
             </p>
 
             <div style={{
@@ -64,9 +68,9 @@ const DoGetSection = () => {
               gap: '20px',
             }}>
               {[
-                { icon: '📍', title: '在熟悉的場所相遇', desc: '健身房、咖啡廳、圖書館，自然認識身邊的人' },
-                { icon: '🎓', title: '像同學一樣漸漸熟悉', desc: '不急於一時，培養真實的了解和信任' },
-                { icon: '💝', title: '日久生情的連結', desc: '相同地點重複出現，建立自然的熟悉感' },
+                t.dogetSection.features.familiar,
+                t.dogetSection.features.gradual,
+                t.dogetSection.features.connection,
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -165,13 +169,13 @@ const DoGetSection = () => {
                   fontWeight: '600',
                   marginBottom: '10px',
                 }}>
-                  {index === 0 ? '健身愛好者' : index === 1 ? '咖啡控' : '圖書館常客'}
+                  {index === 0 ? t.dogetSection.cards.fitness : index === 1 ? t.dogetSection.cards.coffee : t.dogetSection.cards.library}
                 </div>
                 <div style={{
                   fontSize: '16px',
                   opacity: 0.9,
                 }}>
-                  距離 {index === 0 ? '500m' : index === 1 ? '1.2km' : '800m'}
+                  {index === 0 ? '500m' : index === 1 ? '1.2km' : '800m'}
                 </div>
               </motion.div>
             ))}

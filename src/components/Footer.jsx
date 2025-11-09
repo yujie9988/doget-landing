@@ -1,7 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext'
+import { getTranslation } from '../locales'
 
 const Footer = () => {
+  const { language } = useLanguage()
+  const t = getTranslation(language)
+
   return (
     <footer style={{
       backgroundColor: '#1f2937',
@@ -38,8 +43,7 @@ const Footer = () => {
               lineHeight: '1.6',
               marginBottom: '20px',
             }}>
-              發現身邊的美好連結，<br />
-              開啟全新社交體驗
+              {t.footer.description}
             </p>
             <div style={{
               display: 'flex',

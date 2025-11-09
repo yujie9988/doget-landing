@@ -1,7 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext'
+import { getTranslation } from '../locales'
 
 const DownloadCTA = () => {
+  const { language } = useLanguage()
+  const t = getTranslation(language)
+
   return (
     <section id="download" className="section" style={{
       backgroundColor: '#f9fafb',
@@ -79,7 +84,7 @@ const DownloadCTA = () => {
                 marginBottom: '30px',
               }}
             >
-              📱
+              {t.downloadCTA.icon}
             </motion.div>
 
             <motion.h2
@@ -93,7 +98,7 @@ const DownloadCTA = () => {
                 fontWeight: '800',
               }}
             >
-              準備好開始了嗎？
+              {t.downloadCTA.title}
             </motion.h2>
 
             <motion.p
@@ -109,7 +114,7 @@ const DownloadCTA = () => {
                 margin: '0 auto 40px',
               }}
             >
-              立即下載 DoGet，發現身邊有趣的人，開啟全新的社交體驗
+              {t.downloadCTA.description}
             </motion.p>
 
             <motion.div
@@ -141,7 +146,7 @@ const DownloadCTA = () => {
                 }}
               >
                 <span style={{ fontSize: '24px' }}></span>
-                App Store
+                {t.downloadCTA.appStore}
               </motion.button>
 
               <motion.button
@@ -162,7 +167,7 @@ const DownloadCTA = () => {
                 }}
               >
                 <span style={{ fontSize: '24px' }}></span>
-                Google Play
+                {t.downloadCTA.googlePlay}
               </motion.button>
             </motion.div>
 
@@ -182,18 +187,18 @@ const DownloadCTA = () => {
               }}
             >
               <div>
-                <div style={{ fontSize: '28px', fontWeight: '700' }}>10,000+</div>
-                <div style={{ fontSize: '14px', opacity: 0.8 }}>活躍用戶</div>
+                <div style={{ fontSize: '28px', fontWeight: '700' }}>{t.downloadCTA.stats.users.number}</div>
+                <div style={{ fontSize: '14px', opacity: 0.8 }}>{t.downloadCTA.stats.users.label}</div>
               </div>
               <div style={{ opacity: 0.5 }}>|</div>
               <div>
-                <div style={{ fontSize: '28px', fontWeight: '700' }}>4.8★</div>
-                <div style={{ fontSize: '14px', opacity: 0.8 }}>用戶評分</div>
+                <div style={{ fontSize: '28px', fontWeight: '700' }}>{t.downloadCTA.stats.rating.number}</div>
+                <div style={{ fontSize: '14px', opacity: 0.8 }}>{t.downloadCTA.stats.rating.label}</div>
               </div>
               <div style={{ opacity: 0.5 }}>|</div>
               <div>
-                <div style={{ fontSize: '28px', fontWeight: '700' }}>50,000+</div>
-                <div style={{ fontSize: '14px', opacity: 0.8 }}>成功配對</div>
+                <div style={{ fontSize: '28px', fontWeight: '700' }}>{t.downloadCTA.stats.matches.number}</div>
+                <div style={{ fontSize: '14px', opacity: 0.8 }}>{t.downloadCTA.stats.matches.label}</div>
               </div>
             </motion.div>
           </div>

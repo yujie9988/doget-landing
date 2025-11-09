@@ -1,7 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext'
+import { getTranslation } from '../locales'
 
 const GameSection = () => {
+  const { language } = useLanguage()
+  const t = getTranslation(language)
+
   return (
     <section className="section" style={{
       background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',

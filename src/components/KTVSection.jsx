@@ -1,7 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext'
+import { getTranslation } from '../locales'
 
 const KTVSection = () => {
+  const { language } = useLanguage()
+  const t = getTranslation(language)
+
   return (
     <section className="section" style={{
       backgroundColor: 'white',
@@ -37,7 +42,7 @@ const KTVSection = () => {
                 marginBottom: '20px',
               }}
             >
-              社群聚會
+              {t.ktvSection.badge}
             </motion.div>
 
             <h2 style={{
@@ -45,7 +50,7 @@ const KTVSection = () => {
               marginBottom: '24px',
               color: '#1f2937',
             }}>
-              KTV 社群聊天
+              {t.ktvSection.title}
             </h2>
 
             <p style={{
@@ -54,7 +59,7 @@ const KTVSection = () => {
               marginBottom: '30px',
               lineHeight: '1.8',
             }}>
-              按地點分組的群聊室，與附近的朋友一起討論、分享生活。每個地點都有專屬的社群空間。
+              {t.ktvSection.description}
             </p>
 
             <div style={{
@@ -63,10 +68,10 @@ const KTVSection = () => {
               gap: '20px',
             }}>
               {[
-                { icon: '🎤', title: '按地點分組', desc: '健身房、咖啡廳各有專屬聊天室' },
-                { icon: '👥', title: '實時互動', desc: '與同一地點的用戶即時交流' },
-                { icon: '🛡️', title: '防刷屏機制', desc: '冷卻系統確保聊天質量' },
-                { icon: '🔐', title: '資格檢查', desc: '確保只有合格用戶參與討論' },
+                t.ktvSection.features.grouping,
+                t.ktvSection.features.realtime,
+                t.ktvSection.features.cooldown,
+                t.ktvSection.features.verification,
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -146,8 +151,8 @@ const KTVSection = () => {
                   🏋️
                 </div>
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: '18px', fontWeight: '600' }}>健身房 KTV</div>
-                  <div style={{ fontSize: '14px', color: '#6b7280' }}>128 人在線</div>
+                  <div style={{ fontSize: '18px', fontWeight: '600' }}>{t.ktvSection.chatRoom.title}</div>
+                  <div style={{ fontSize: '14px', color: '#6b7280' }}>128 {t.ktvSection.chatRoom.online}</div>
                 </div>
               </div>
 
@@ -159,9 +164,9 @@ const KTVSection = () => {
                 maxHeight: '400px',
               }}>
                 {[
-                  { user: '健身達人', avatar: '💪', msg: '今天有人要一起練腿嗎？', time: '14:30' },
-                  { user: '跑步愛好者', avatar: '🏃', msg: '我在！18:00 見', time: '14:32' },
-                  { user: '瑜伽教練', avatar: '🧘', msg: '明天早上有瑜伽課哦', time: '14:35' },
+                  { user: t.ktvSection.chatRoom.users.fitness, avatar: '💪', msg: t.ktvSection.chatRoom.messages.msg1, time: '14:30' },
+                  { user: t.ktvSection.chatRoom.users.runner, avatar: '🏃', msg: t.ktvSection.chatRoom.messages.msg2, time: '14:32' },
+                  { user: t.ktvSection.chatRoom.users.yoga, avatar: '🧘', msg: t.ktvSection.chatRoom.messages.msg3, time: '14:35' },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -226,7 +231,7 @@ const KTVSection = () => {
                   gap: '10px',
                 }}
               >
-                <div style={{ fontSize: '14px', color: '#6b7280' }}>在線：</div>
+                <div style={{ fontSize: '14px', color: '#6b7280' }}>{t.ktvSection.chatRoom.onlineLabel}</div>
                 <div style={{ display: 'flex', marginLeft: '-5px' }}>
                   {['💪', '🏃', '🧘', '🤸', '🚴', '⛹️'].map((emoji, i) => (
                     <motion.div

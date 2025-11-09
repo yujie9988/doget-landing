@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '../contexts/LanguageContext'
+import { getTranslation } from '../locales'
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
+  const [showLangMenu, setShowLangMenu] = useState(false)
+  const { language, toggleLanguage } = useLanguage()
+  const t = getTranslation(language)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,7 +83,7 @@ const Navbar = () => {
           }}
           onMouseEnter={(e) => e.target.style.opacity = '1'}
           onMouseLeave={(e) => e.target.style.opacity = '0.9'}
-          >首頁</a>
+          >{t.navbar.home}</a>
 
           <a href="/features" style={{
             color: '#ffffff',
@@ -90,7 +95,123 @@ const Navbar = () => {
           }}
           onMouseEnter={(e) => e.target.style.opacity = '1'}
           onMouseLeave={(e) => e.target.style.opacity = '0.9'}
-          >功能介紹</a>
+          >{t.navbar.features}</a>
+
+          {/* 語言切換選單 */}
+          <div style={{ position: 'relative' }}>
+            <button
+              onClick={() => setShowLangMenu(!showLangMenu)}
+              style={{
+                backgroundColor: 'transparent',
+                color: '#ffffff',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+                padding: '8px 16px',
+                borderRadius: '20px',
+                fontWeight: '500',
+                fontSize: '14px',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)'
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)'
+                e.currentTarget.style.backgroundColor = 'transparent'
+              }}
+            >
+              <span>🌐</span>
+              <span>{language === 'zh-TW' ? '繁體中文' : 'English'}</span>
+            </button>
+
+            <AnimatePresence>
+              {showLangMenu && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  style={{
+                    position: 'absolute',
+                    top: '45px',
+                    right: '0',
+                    backgroundColor: 'rgba(0, 0, 0, 0.95)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    borderRadius: '12px',
+                    overflow: 'hidden',
+                    minWidth: '140px',
+                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)',
+                    backdropFilter: 'blur(10px)',
+                  }}
+                >
+                  <button
+                    onClick={() => {
+                      toggleLanguage('zh-TW')
+                      setShowLangMenu(false)
+                    }}
+                    style={{
+                      width: '100%',
+                      padding: '12px 16px',
+                      backgroundColor: language === 'zh-TW' ? 'rgba(255, 255, 255, 0.1)' : 'transparent',
+                      color: '#ffffff',
+                      border: 'none',
+                      textAlign: 'left',
+                      cursor: 'pointer',
+                      fontSize: '14px',
+                      fontWeight: language === 'zh-TW' ? '600' : '400',
+                      transition: 'background-color 0.2s',
+                    }}
+                    onMouseEnter={(e) => {
+                      if (language !== 'zh-TW') {
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)'
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (language !== 'zh-TW') {
+                        e.currentTarget.style.backgroundColor = 'transparent'
+                      }
+                    }}
+                  >
+                    繁體中文
+                  </button>
+                  <button
+                    onClick={() => {
+                      toggleLanguage('en')
+                      setShowLangMenu(false)
+                    }}
+                    style={{
+                      width: '100%',
+                      padding: '12px 16px',
+                      backgroundColor: language === 'en' ? 'rgba(255, 255, 255, 0.1)' : 'transparent',
+                      color: '#ffffff',
+                      border: 'none',
+                      textAlign: 'left',
+                      cursor: 'pointer',
+                      fontSize: '14px',
+                      fontWeight: language === 'en' ? '600' : '400',
+                      transition: 'background-color 0.2s',
+                    }}
+                    onMouseEnter={(e) => {
+                      if (language !== 'en') {
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)'
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (language !== 'en') {
+                        e.currentTarget.style.backgroundColor = 'transparent'
+                      }
+                    }}
+                  >
+                    English
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
           <a href="#download" style={{
             backgroundColor: '#ffffff',
@@ -111,7 +232,7 @@ const Navbar = () => {
             e.target.style.transform = 'scale(1)'
             e.target.style.boxShadow = '0 2px 8px rgba(255, 255, 255, 0.2)'
           }}
-          >下載 App</a>
+          >{t.navbar.download}</a>
         </div>
       </div>
     </motion.nav>
