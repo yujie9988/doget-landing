@@ -23,7 +23,7 @@ const Hero = () => {
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
-      backgroundImage: 'url(/PageImage/index0page.jpg)',
+      backgroundImage: 'url(/PageImage/mainpage.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
@@ -61,7 +61,7 @@ const Hero = () => {
               alignItems: 'center',
               justifyContent: 'center',
               gap: 'clamp(10px, 1.5vw, 20px)',
-              marginBottom: '40px',
+              marginBottom: '100px',
               flexWrap: 'nowrap',
               maxWidth: '100%',
             }}
