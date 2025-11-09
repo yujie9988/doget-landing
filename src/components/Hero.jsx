@@ -23,7 +23,8 @@ const Hero = () => {
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'flex-end',
-      paddingBottom: '80px',
+      justifyContent: 'center',
+      paddingBottom: '100px',
       backgroundImage: 'url(/PageImage/mainpage.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -42,7 +43,14 @@ const Hero = () => {
         zIndex: 0,
       }} />
 
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="container" style={{
+        position: 'relative',
+        zIndex: 1,
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,6 +58,9 @@ const Hero = () => {
           style={{
             textAlign: 'center',
             color: 'white',
+            width: '100%',
+            maxWidth: '1200px',
+            margin: '0 auto',
           }}
         >
           {/* Tinder 風格的主標題 */}
@@ -74,6 +85,7 @@ const Hero = () => {
               lineHeight: '1',
               textShadow: '0 4px 20px rgba(0,0,0,0.3)',
               flexShrink: 0,
+              textAlign: 'center',
             }}>
               Do
             </div>
@@ -108,6 +120,7 @@ const Hero = () => {
                     color: 'white',
                     whiteSpace: 'nowrap',
                     lineHeight: '1.2',
+                    textAlign: 'center',
                   }}>
                     {placeGroups[currentIndex][0]}
                   </div>
@@ -118,6 +131,7 @@ const Hero = () => {
                       color: 'white',
                       whiteSpace: 'nowrap',
                       lineHeight: '1.2',
+                      textAlign: 'center',
                     }}>
                       {placeGroups[currentIndex][1]}
                     </div>
@@ -133,6 +147,7 @@ const Hero = () => {
               lineHeight: '1',
               textShadow: '0 4px 20px rgba(0,0,0,0.3)',
               flexShrink: 0,
+              textAlign: 'center',
             }}>
               Get
             </div>
@@ -144,10 +159,11 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             style={{
               fontSize: '24px',
-              marginBottom: '30px',
               opacity: 0.95,
-              maxWidth: '600px',
+              maxWidth: '700px',
               margin: '0 auto 30px',
+              padding: '0 20px',
+              textAlign: 'center',
             }}
           >
             基於地點的智能配對，在各種場合遇見志同道合的朋友
@@ -161,7 +177,9 @@ const Hero = () => {
               display: 'flex',
               gap: '20px',
               justifyContent: 'center',
+              alignItems: 'center',
               flexWrap: 'wrap',
+              padding: '0 20px',
             }}
           >
             <motion.button
