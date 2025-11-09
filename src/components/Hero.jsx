@@ -22,8 +22,8 @@ const Hero = () => {
     <section style={{
       minHeight: '100vh',
       display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
       backgroundImage: 'url(/PageImage/mainpage.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -42,6 +42,10 @@ const Hero = () => {
         zIndex: 0,
       }} />
 
+      {/* 上方佔位區 */}
+      <div style={{ flex: 1 }} />
+
+      {/* 中間標題區 - 垂直居中 */}
       <div className="container" style={{
         position: 'relative',
         zIndex: 1,
@@ -50,33 +54,21 @@ const Hero = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
+        {/* Tinder 風格的主標題 */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           style={{
-            textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 'clamp(3px, 0.5vw, 8px)',
+            flexWrap: 'nowrap',
+            maxWidth: '100%',
             color: 'white',
-            width: '100%',
-            maxWidth: '1200px',
-            margin: '0 auto',
           }}
         >
-          {/* Tinder 風格的主標題 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: 'clamp(3px, 0.5vw, 8px)',
-              marginBottom: '10px',
-              flexWrap: 'nowrap',
-              maxWidth: '100%',
-            }}
-          >
             {/* "Do" 大字 */}
             <div style={{
               fontSize: 'clamp(40px, 8vw, 90px)',
@@ -150,8 +142,31 @@ const Hero = () => {
             }}>
               Get
             </div>
-          </motion.div>
+        </motion.div>
+      </div>
 
+      {/* 下方佔位區 */}
+      <div style={{ flex: 1 }} />
+
+      {/* 底部區域 - 描述文字和下載按鈕 */}
+      <div className="container" style={{
+        position: 'relative',
+        zIndex: 1,
+        width: '100%',
+        paddingBottom: '60px',
+      }}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          style={{
+            textAlign: 'center',
+            color: 'white',
+            width: '100%',
+            maxWidth: '1200px',
+            margin: '0 auto',
+          }}
+        >
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -162,7 +177,6 @@ const Hero = () => {
               maxWidth: '700px',
               margin: '0 auto 30px',
               padding: '0 20px',
-              paddingBottom:'50px',
               textAlign: 'center',
             }}
           >
@@ -217,29 +231,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* 滾動提示 */}
-      <motion.div
-        animate={{
-          y: [0, 10, 0],
-        }}
-        transition={{
-          duration: 1.5,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        style={{
-          position: 'absolute',
-          bottom: '30px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          color: 'white',
-          fontSize: '32px',
-          opacity: 0.7,
-        }}
-      >
-        ↓
-      </motion.div>
     </section>
   )
 }
