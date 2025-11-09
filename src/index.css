@@ -60,8 +60,22 @@ img {
   padding: 100px 0;
 }
 
+/* 響應式網格布局 */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 60px 0;
+  }
+
+  /* 在小螢幕上改為單列布局 */
+  .responsive-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }

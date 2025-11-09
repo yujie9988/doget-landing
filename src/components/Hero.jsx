@@ -23,7 +23,7 @@ const Hero = () => {
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
-      backgroundImage: 'url(/PageImage/index1page.jpg)',
+      backgroundImage: 'url(/PageImage/index0page.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
@@ -60,15 +60,15 @@ const Hero = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: 'clamp(15px, 2vw, 30px)',
-              marginBottom: '60px',
+              gap: 'clamp(10px, 1.5vw, 20px)',
+              marginBottom: '40px',
               flexWrap: 'nowrap',
               maxWidth: '100%',
             }}
           >
             {/* "Do" 大字 */}
             <div style={{
-              fontSize: 'clamp(70px, 13vw, 180px)',
+              fontSize: 'clamp(50px, 10vw, 120px)',
               fontWeight: '900',
               lineHeight: '1',
               textShadow: '0 4px 20px rgba(0,0,0,0.3)',
@@ -80,8 +80,8 @@ const Hero = () => {
             {/* 中間輪播區域 */}
             <div style={{
               position: 'relative',
-              width: 'clamp(250px, 35vw, 450px)',
-              height: 'clamp(140px, 26vw, 360px)',
+              width: 'clamp(180px, 28vw, 350px)',
+              height: 'clamp(100px, 20vw, 280px)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -98,11 +98,11 @@ const Hero = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    gap: '10px',
+                    gap: '8px',
                   }}
                 >
                   <div style={{
-                    fontSize: 'clamp(36px, 7vw, 100px)',
+                    fontSize: 'clamp(28px, 5vw, 70px)',
                     fontWeight: '700',
                     color: 'white',
                     whiteSpace: 'nowrap',
@@ -112,7 +112,7 @@ const Hero = () => {
                   </div>
                   {placeGroups[currentIndex][1] && (
                     <div style={{
-                      fontSize: 'clamp(36px, 7vw, 100px)',
+                      fontSize: 'clamp(28px, 5vw, 70px)',
                       fontWeight: '700',
                       color: 'white',
                       whiteSpace: 'nowrap',
@@ -127,7 +127,7 @@ const Hero = () => {
 
             {/* "Get" 大字 */}
             <div style={{
-              fontSize: 'clamp(70px, 13vw, 180px)',
+              fontSize: 'clamp(50px, 10vw, 120px)',
               fontWeight: '900',
               lineHeight: '1',
               textShadow: '0 4px 20px rgba(0,0,0,0.3)',

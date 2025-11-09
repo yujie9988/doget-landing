@@ -12,10 +12,12 @@ const ThirdSection = () => {
       <div className="container">
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+          gridTemplateColumns: '1fr 1fr',
           gap: '60px',
           alignItems: 'center',
-        }}>
+        }}
+        className="responsive-grid"
+        >
           {/* 左側：YouTube 影片位置 */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
