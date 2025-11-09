@@ -22,7 +22,8 @@ const Hero = () => {
     <section style={{
       minHeight: '100vh',
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'flex-end',
+      paddingBottom: '80px',
       backgroundImage: 'url(/PageImage/mainpage.jpg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -60,7 +61,7 @@ const Hero = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: 'clamp(5px, 1vw, 12px)',
+              gap: 'clamp(3px, 0.5vw, 8px)',
               marginBottom: '10px',
               flexWrap: 'nowrap',
               maxWidth: '100%',
@@ -68,7 +69,7 @@ const Hero = () => {
           >
             {/* "Do" 大字 */}
             <div style={{
-              fontSize: 'clamp(50px, 10vw, 120px)',
+              fontSize: 'clamp(40px, 8vw, 90px)',
               fontWeight: '900',
               lineHeight: '1',
               textShadow: '0 4px 20px rgba(0,0,0,0.3)',
@@ -80,8 +81,8 @@ const Hero = () => {
             {/* 中間輪播區域 */}
             <div style={{
               position: 'relative',
-              width: 'clamp(180px, 28vw, 350px)',
-              height: 'clamp(100px, 20vw, 280px)',
+              width: 'clamp(140px, 22vw, 270px)',
+              height: 'clamp(80px, 16vw, 220px)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -102,7 +103,7 @@ const Hero = () => {
                   }}
                 >
                   <div style={{
-                    fontSize: 'clamp(28px, 5vw, 70px)',
+                    fontSize: 'clamp(22px, 4vw, 52px)',
                     fontWeight: '700',
                     color: 'white',
                     whiteSpace: 'nowrap',
@@ -112,7 +113,7 @@ const Hero = () => {
                   </div>
                   {placeGroups[currentIndex][1] && (
                     <div style={{
-                      fontSize: 'clamp(28px, 5vw, 70px)',
+                      fontSize: 'clamp(22px, 4vw, 52px)',
                       fontWeight: '700',
                       color: 'white',
                       whiteSpace: 'nowrap',
@@ -127,7 +128,7 @@ const Hero = () => {
 
             {/* "Get" 大字 */}
             <div style={{
-              fontSize: 'clamp(50px, 10vw, 120px)',
+              fontSize: 'clamp(40px, 8vw, 90px)',
               fontWeight: '900',
               lineHeight: '1',
               textShadow: '0 4px 20px rgba(0,0,0,0.3)',
@@ -143,10 +144,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             style={{
               fontSize: '24px',
-              marginBottom: '80px',
+              marginBottom: '30px',
               opacity: 0.95,
               maxWidth: '600px',
-              margin: '0 auto 80px',
+              margin: '0 auto 30px',
             }}
           >
             基於地點的智能配對，在各種場合遇見志同道合的朋友
