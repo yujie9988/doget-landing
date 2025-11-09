@@ -162,6 +162,7 @@ const Hero = () => {
               maxWidth: '700px',
               margin: '0 auto 30px',
               padding: '0 20px',
+              paddingBottom:'50px',
               textAlign: 'center',
             }}
           >
