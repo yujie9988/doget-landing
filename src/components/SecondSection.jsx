@@ -125,7 +125,7 @@ const SecondSection = () => {
               paddingBottom: '56.25%', // 16:9 比例
               height: 0,
               overflow: 'hidden',
-              borderRadius: '20px',
+              borderRadius: '30px',
               boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
               backgroundColor: '#f3f4f6',
             }}>

@@ -60,7 +60,7 @@ const Hero = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: 'clamp(10px, 1.5vw, 20px)',
+              gap: 'clamp(5px, 1vw, 12px)',
               marginBottom: '10px',
               flexWrap: 'nowrap',
               maxWidth: '100%',
@@ -143,10 +143,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             style={{
               fontSize: '24px',
-              marginBottom: '40px',
+              marginBottom: '80px',
               opacity: 0.95,
               maxWidth: '600px',
-              margin: '0 auto 40px',
+              margin: '0 auto 80px',
             }}
           >
             基於地點的智能配對，在各種場合遇見志同道合的朋友
@@ -195,19 +195,6 @@ const Hero = () => {
             >
               Google Play 下載
             </motion.button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            style={{
-              marginTop: '60px',
-              fontSize: '14px',
-              opacity: 0.8,
-            }}
-          >
-            ✨ 已有超過 10,000+ 用戶正在使用
           </motion.div>
         </motion.div>
       </div>
