@@ -71,7 +71,6 @@ export const en = {
 
   // Comparison Section
   comparisonSection: {
-    icon: '🛡️',
     title: 'Why Choose DoGet?',
     description: 'Remember how you gradually got to know your classmates at school?',
     descriptionHighlight1: 'DoGet uses ',
@@ -92,19 +91,16 @@ export const en = {
     },
     highlights: {
       classmate: {
-        icon: '🎓',
         title: 'Like Meeting Classmates at School',
         desc: 'Other apps are like blind dating - matching strangers first, then chatting',
         highlight: 'DoGet lets you naturally meet people around you at familiar places (gyms, cafés), just like gradually getting to know classmates in a classroom',
       },
       connection: {
-        icon: '💝',
         title: 'Genuine Connections Over Time',
         desc: 'Traditional apps offer quick matches lacking understanding and trust',
         highlight: 'DoGet builds natural familiarity through repeated encounters at the same locations. It\'s not rushed, but nurtures real connections',
       },
       noFake: {
-        icon: '🚫',
         title: 'Natural Fake Account Filtering',
         desc: 'Other platforms are flooded with fake accounts, scam messages, and bots',
         highlight: 'Scammers can\'t fake real locations - DoGet\'s location mechanism naturally filters out all fake accounts and bots',
@@ -142,17 +138,14 @@ export const en = {
     description: 'Just like gradually getting to know your classmates. DoGet helps you naturally discover people around you at places you frequent (gyms, cafés, libraries). Not quick matching with strangers, but building genuine connections at familiar places.',
     features: {
       familiar: {
-        icon: '📍',
         title: 'Meet at Familiar Places',
         desc: 'Gyms, cafés, libraries - naturally meet people around you',
       },
       gradual: {
-        icon: '🎓',
         title: 'Gradually Get Acquainted Like Classmates',
         desc: 'Not rushed, but building real understanding and trust',
       },
       connection: {
-        icon: '💝',
         title: 'Connections Growing Over Time',
         desc: 'Repeated encounters at the same places build natural familiarity',
       },
@@ -172,22 +165,18 @@ export const en = {
     description: 'Location-based group chat rooms where you can discuss and share life with nearby friends. Each location has its own dedicated community space.',
     features: {
       grouping: {
-        icon: '🎤',
         title: 'Grouped by Location',
         desc: 'Gyms, cafés each have dedicated chat rooms',
       },
       realtime: {
-        icon: '👥',
         title: 'Real-time Interaction',
         desc: 'Instantly connect with users at the same location',
       },
       cooldown: {
-        icon: '🛡️',
         title: 'Anti-spam Mechanism',
         desc: 'Cooldown system ensures chat quality',
       },
       verification: {
-        icon: '🔐',
         title: 'Eligibility Check',
         desc: 'Ensures only qualified users participate',
       },
@@ -235,7 +224,6 @@ export const en = {
 
   // Download CTA
   downloadCTA: {
-    icon: '📱',
     title: 'Ready to Get Started?',
     description: 'Download DoGet now, discover interesting people around you, and start a brand new social experience',
     appStore: 'App Store',

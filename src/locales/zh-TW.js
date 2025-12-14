@@ -71,7 +71,6 @@ export const zhTW = {
 
   // Comparison Section
   comparisonSection: {
-    icon: '🛡️',
     title: '為何選擇 DoGet？',
     description: '還記得上學時，和坐隔壁的同學從陌生到熟悉的過程嗎？',
     descriptionHighlight1: 'DoGet 透過',
@@ -92,19 +91,16 @@ export const zhTW = {
     },
     highlights: {
       classmate: {
-        icon: '🎓',
         title: '像上學時認識同學一樣',
         desc: '其他 App 像盲目約會，配對陌生人後才開始聊天',
         highlight: 'DoGet 讓你在熟悉的場所（健身房、咖啡廳）自然認識周遭的人，就像在教室裡漸漸熟悉身邊的同學',
       },
       connection: {
-        icon: '💝',
         title: '日久生情的真實連結',
         desc: '傳統 App 快速配對，缺乏了解和信任的過程',
         highlight: 'DoGet 透過相同地點的重複出現，建立自然的熟悉感。不急於一時，而是培養真正的連結',
       },
       noFake: {
-        icon: '🚫',
         title: '天然過濾假帳號',
         desc: '其他平台充斥虛假帳號、詐騙訊息和機器人',
         highlight: '詐騙者無法偽造真實地點，DoGet 的地點機制自然過濾掉所有假帳號和機器人',
@@ -142,17 +138,14 @@ export const zhTW = {
     description: '就像上學時漸漸認識隔壁同學一樣。DoGet 基於你常去的地點（健身房、咖啡廳、圖書館），讓你自然地發現周遭的人。不是快速配對陌生人，而是在熟悉的場所培養真實的連結。',
     features: {
       familiar: {
-        icon: '📍',
         title: '在熟悉的場所相遇',
         desc: '健身房、咖啡廳、圖書館，自然認識身邊的人',
       },
       gradual: {
-        icon: '🎓',
         title: '像同學一樣漸漸熟悉',
         desc: '不急於一時，培養真實的了解和信任',
       },
       connection: {
-        icon: '💝',
         title: '日久生情的連結',
         desc: '相同地點重複出現，建立自然的熟悉感',
       },
@@ -172,22 +165,18 @@ export const zhTW = {
     description: '按地點分組的群聊室，與附近的朋友一起討論、分享生活。每個地點都有專屬的社群空間。',
     features: {
       grouping: {
-        icon: '🎤',
         title: '按地點分組',
         desc: '健身房、咖啡廳各有專屬聊天室',
       },
       realtime: {
-        icon: '👥',
         title: '實時互動',
         desc: '與同一地點的用戶即時交流',
       },
       cooldown: {
-        icon: '🛡️',
         title: '防刷屏機制',
         desc: '冷卻系統確保聊天質量',
       },
       verification: {
-        icon: '🔐',
         title: '資格檢查',
         desc: '確保只有合格用戶參與討論',
       },
@@ -235,7 +224,6 @@ export const zhTW = {
 
   // Download CTA
   downloadCTA: {
-    icon: '📱',
     title: '準備好開始了嗎？',
     description: '立即下載 DoGet，發現身邊有趣的人，開啟全新的社交體驗',
     appStore: 'App Store',
