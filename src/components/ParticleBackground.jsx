@@ -32,31 +32,36 @@ const ParticleBackground = ({ children }) => {
       constructor() {
         this.x = Math.random() * width
         this.y = Math.random() * height
-        this.vx = (Math.random() - 0.5) * 0.5
-        this.vy = (Math.random() - 0.5) * 0.5
-        this.radius = Math.random() * 2 + 1
+        this.vx = (Math.random() - 0.5) * 0.8
+        this.vy = (Math.random() - 0.5) * 0.8
+        this.radius = Math.random() * 2.5 + 0.8
+        this.opacity = Math.random() * 0.5 + 0.5
       }
 
       update() {
         this.x += this.vx
         this.y += this.vy
 
-        // 邊界檢測
-        if (this.x < 0 || this.x > width) this.vx *= -1
-        if (this.y < 0 || this.y > height) this.vy *= -1
+        // 邊界檢測 - 允許粒子稍微超出邊界再反彈
+        if (this.x < -20 || this.x > width + 20) this.vx *= -1
+        if (this.y < -20 || this.y > height + 20) this.vy *= -1
+
+        // 確保粒子不會跑太遠
+        this.x = Math.max(-20, Math.min(width + 20, this.x))
+        this.y = Math.max(-20, Math.min(height + 20, this.y))
       }
 
       draw() {
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)'
+        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`
         ctx.fill()
       }
     }
 
     // 創建粒子
     const createParticles = () => {
-      const particleCount = Math.floor((width * height) / 15000)
+      const particleCount = Math.floor((width * height) / 8000) // 增加粒子密度
       particlesRef.current = []
       for (let i = 0; i < particleCount; i++) {
         particlesRef.current.push(new Particle())
@@ -77,9 +82,9 @@ const ParticleBackground = ({ children }) => {
           const dy = particles[i].y - particles[j].y
           const distance = Math.sqrt(dx * dx + dy * dy)
 
-          if (distance < 120) {
+          if (distance < 150) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(255, 255, 255, ${0.2 * (1 - distance / 120)})`
+            ctx.strokeStyle = `rgba(255, 255, 255, ${0.3 * (1 - distance / 150)})`
             ctx.lineWidth = 1
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)
@@ -93,9 +98,9 @@ const ParticleBackground = ({ children }) => {
           const dy = particles[i].y - mouse.y
           const distance = Math.sqrt(dx * dx + dy * dy)
 
-          if (distance < 150) {
+          if (distance < 200) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(147, 197, 253, ${0.8 * (1 - distance / 150)})`
+            ctx.strokeStyle = `rgba(147, 197, 253, ${1.0 * (1 - distance / 200)})`
             ctx.lineWidth = 2
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(mouse.x, mouse.y)
@@ -176,10 +181,11 @@ const ParticleBackground = ({ children }) => {
           width: '100%',
           height: '100%',
           zIndex: 0,
+          pointerEvents: 'auto',
         }}
       />
       {/* 內容層 */}
-      <div style={{ position: 'relative', zIndex: 1 }}>
+      <div style={{ position: 'relative', zIndex: 1, pointerEvents: 'auto' }}>
         {children}
       </div>
     </div>
