@@ -20,6 +20,7 @@ const Footer = () => {
         <div style={{
           backgroundColor: 'rgba(255, 255, 255, 0.1)',
           backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
           borderRadius: '30px',
           padding: '50px 40px 30px',
           border: '1px solid rgba(255, 255, 255, 0.2)',

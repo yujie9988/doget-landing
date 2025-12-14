@@ -127,6 +127,7 @@ const KTVSection = () => {
             <div style={{
               backgroundColor: 'rgba(255, 255, 255, 0.1)',
               backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
               borderRadius: '30px',
               padding: '30px',
               boxShadow: '0 20px 60px rgba(0,0,0,0.3)',

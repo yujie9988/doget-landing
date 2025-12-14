@@ -24,6 +24,7 @@ const DownloadCTA = () => {
           style={{
             backgroundColor: 'rgba(255, 255, 255, 0.1)',
             backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
             borderRadius: '30px',
             padding: '80px 60px',
             textAlign: 'center',
