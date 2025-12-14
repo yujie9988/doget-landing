@@ -10,6 +10,7 @@ const KTVSection = () => {
 
   return (
     <section className="section" style={{
+      backgroundColor: '#1f2937',
       overflow: 'hidden',
     }}>
       <ParticleBackground>

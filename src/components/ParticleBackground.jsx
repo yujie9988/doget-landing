@@ -2,22 +2,25 @@ import React, { useEffect, useRef } from 'react'
 
 const ParticleBackground = ({ children }) => {
   const canvasRef = useRef(null)
+  const containerRef = useRef(null)
   const mouseRef = useRef({ x: null, y: null })
   const particlesRef = useRef([])
   const animationFrameRef = useRef(null)
 
   useEffect(() => {
     const canvas = canvasRef.current
-    if (!canvas) return
+    const container = containerRef.current
+    if (!canvas || !container) return
 
     const ctx = canvas.getContext('2d')
-    let width = window.innerWidth
-    let height = canvas.parentElement.offsetHeight
+    let width = container.offsetWidth
+    let height = container.offsetHeight
 
     // 設置 canvas 尺寸
     const setCanvasSize = () => {
-      width = window.innerWidth
-      height = canvas.parentElement.offsetHeight
+      const rect = container.getBoundingClientRect()
+      width = rect.width
+      height = rect.height
       canvas.width = width
       canvas.height = height
     }
@@ -92,7 +95,7 @@ const ParticleBackground = ({ children }) => {
 
           if (distance < 150) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(139, 92, 246, ${0.8 * (1 - distance / 150)})`
+            ctx.strokeStyle = `rgba(147, 197, 253, ${0.8 * (1 - distance / 150)})`
             ctx.lineWidth = 2
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(mouse.x, mouse.y)
@@ -132,15 +135,16 @@ const ParticleBackground = ({ children }) => {
       mouseRef.current.y = null
     }
 
-    // 窗口大小改變事件
-    const handleResize = () => {
+    // 使用 ResizeObserver 監聽容器大小變化
+    const resizeObserver = new ResizeObserver(() => {
       setCanvasSize()
       createParticles()
-    }
+    })
+
+    resizeObserver.observe(container)
 
     canvas.addEventListener('mousemove', handleMouseMove)
     canvas.addEventListener('mouseleave', handleMouseLeave)
-    window.addEventListener('resize', handleResize)
 
     // 清理
     return () => {
@@ -149,13 +153,20 @@ const ParticleBackground = ({ children }) => {
       }
       canvas.removeEventListener('mousemove', handleMouseMove)
       canvas.removeEventListener('mouseleave', handleMouseLeave)
-      window.removeEventListener('resize', handleResize)
+      resizeObserver.disconnect()
     }
   }, [])
 
   return (
-    <div style={{ position: 'relative', minHeight: '100vh' }}>
-      {/* Canvas 背景 */}
+    <div
+      ref={containerRef}
+      style={{
+        position: 'relative',
+        width: '100%',
+        height: '100%',
+      }}
+    >
+      {/* Canvas 背景層 */}
       <canvas
         ref={canvasRef}
         style={{
@@ -164,7 +175,6 @@ const ParticleBackground = ({ children }) => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: '#1a1a2e',
           zIndex: 0,
         }}
       />

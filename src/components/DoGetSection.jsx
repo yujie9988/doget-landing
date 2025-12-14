@@ -10,6 +10,7 @@ const DoGetSection = () => {
 
   return (
     <section id="doget" className="section" style={{
+      backgroundColor: '#1f2937',
       overflow: 'hidden',
     }}>
       <ParticleBackground>

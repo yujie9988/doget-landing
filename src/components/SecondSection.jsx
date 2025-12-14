@@ -10,6 +10,7 @@ const SecondSection = () => {
 
   return (
     <section className="section" style={{
+      backgroundColor: '#1f2937',
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
