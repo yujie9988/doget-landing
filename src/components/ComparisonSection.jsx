@@ -70,11 +70,12 @@ const ComparisonSection = () => {
           style={{
             maxWidth: '1000px',
             margin: '0 auto 60px',
-            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            backdropFilter: 'blur(10px)',
             borderRadius: '20px',
             padding: '40px',
             boxShadow: '0 10px 40px rgba(0,0,0,0.3)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
           }}
         >
           <div style={{
@@ -165,11 +166,12 @@ const ComparisonSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 * index }}
               style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
                 borderRadius: '20px',
                 padding: '35px',
                 boxShadow: '0 10px 40px rgba(0,0,0,0.3)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
               }}
             >
               <div style={{
@@ -215,11 +217,14 @@ const ComparisonSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            backdropFilter: 'blur(10px)',
             borderRadius: '30px',
             padding: '50px',
             textAlign: 'center',
             color: 'white',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
           }}
         >
           <h3 style={{

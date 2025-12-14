@@ -125,13 +125,14 @@ const KTVSection = () => {
             }}
           >
             <div style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
+              backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              backdropFilter: 'blur(10px)',
               borderRadius: '30px',
               padding: '30px',
               boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
               maxWidth: '450px',
               margin: '0 auto',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
             }}>
               {/* 群聊標題 */}
               <div style={{
