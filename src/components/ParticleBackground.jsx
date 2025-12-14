@@ -128,11 +128,20 @@ const ParticleBackground = ({ children }) => {
 
     animate()
 
-    // 滑鼠移動事件
+    // 滑鼠移動事件 - 綁定到整個文檔以支持透過內容層的互動
     const handleMouseMove = (e) => {
-      const rect = canvas.getBoundingClientRect()
-      mouseRef.current.x = e.clientX - rect.left
-      mouseRef.current.y = e.clientY - rect.top
+      const rect = container.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+
+      // 檢查滑鼠是否在容器範圍內
+      if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
+        mouseRef.current.x = x
+        mouseRef.current.y = y
+      } else {
+        mouseRef.current.x = null
+        mouseRef.current.y = null
+      }
     }
 
     const handleMouseLeave = () => {
@@ -148,20 +157,53 @@ const ParticleBackground = ({ children }) => {
 
     resizeObserver.observe(container)
 
-    canvas.addEventListener('mousemove', handleMouseMove)
-    canvas.addEventListener('mouseleave', handleMouseLeave)
+    // 綁定到 document 而不是 canvas，這樣即使內容層在上面也能接收事件
+    document.addEventListener('mousemove', handleMouseMove)
+    container.addEventListener('mouseleave', handleMouseLeave)
 
     // 清理
     return () => {
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current)
       }
-      canvas.removeEventListener('mousemove', handleMouseMove)
-      canvas.removeEventListener('mouseleave', handleMouseLeave)
+      document.removeEventListener('mousemove', handleMouseMove)
+      container.removeEventListener('mouseleave', handleMouseLeave)
       resizeObserver.disconnect()
     }
   }, [])
 
+  // 如果沒有 children，則只渲染 canvas 背景層（用於背景模式）
+  if (!children) {
+    return (
+      <div
+        ref={containerRef}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          overflow: 'hidden',
+          pointerEvents: 'none',
+        }}
+      >
+        <canvas
+          ref={canvasRef}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: 0,
+            pointerEvents: 'auto',
+          }}
+        />
+      </div>
+    )
+  }
+
+  // 如果有 children，則作為包裹組件使用（舊模式）
   return (
     <div
       ref={containerRef}
@@ -185,8 +227,10 @@ const ParticleBackground = ({ children }) => {
         }}
       />
       {/* 內容層 */}
-      <div style={{ position: 'relative', zIndex: 1, pointerEvents: 'auto' }}>
-        {children}
+      <div style={{ position: 'relative', zIndex: 1, pointerEvents: 'none', width: '100%', height: '100%' }}>
+        <div style={{ pointerEvents: 'auto' }}>
+          {children}
+        </div>
       </div>
     </div>
   )

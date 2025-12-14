@@ -12,9 +12,10 @@ const ComparisonSection = () => {
     <section className="section" style={{
       backgroundColor: '#1f2937',
       overflow: 'hidden',
+      position: 'relative',
     }}>
-      <ParticleBackground>
-      <div className="container">
+      <ParticleBackground />
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -271,7 +272,6 @@ const ComparisonSection = () => {
           </div>
         </motion.div>
       </div>
-      </ParticleBackground>
     </section>
   )
 }

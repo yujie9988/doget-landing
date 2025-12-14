@@ -14,9 +14,10 @@ const ThirdSection = () => {
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
+      position: 'relative',
     }}>
-      <ParticleBackground>
-      <div className="container">
+      <ParticleBackground />
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
@@ -173,7 +174,6 @@ const ThirdSection = () => {
           </motion.div>
         </div>
       </div>
-      </ParticleBackground>
     </section>
   )
 }

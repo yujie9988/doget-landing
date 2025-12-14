@@ -12,9 +12,10 @@ const DoGetSection = () => {
     <section id="doget" className="section" style={{
       backgroundColor: '#1f2937',
       overflow: 'hidden',
+      position: 'relative',
     }}>
-      <ParticleBackground>
-      <div className="container">
+      <ParticleBackground />
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
@@ -203,7 +204,6 @@ const DoGetSection = () => {
           </motion.div>
         </div>
       </div>
-      </ParticleBackground>
     </section>
   )
 }
