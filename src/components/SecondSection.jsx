@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslation } from '../locales'
+import ParticleBackground from './ParticleBackground'
 
 const SecondSection = () => {
   const { language } = useLanguage()
@@ -9,11 +10,11 @@ const SecondSection = () => {
 
   return (
     <section className="section" style={{
-      backgroundColor: '#ffffff',
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
     }}>
+      <ParticleBackground>
       <div className="container">
         <div style={{
           display: 'grid',
@@ -52,14 +53,14 @@ const SecondSection = () => {
             <h2 style={{
               fontSize: '48px',
               marginBottom: '24px',
-              color: '#1f2937',
+              color: '#ffffff',
             }}>
               {t.secondSection.title}
             </h2>
 
             <p style={{
               fontSize: '18px',
-              color: '#6b7280',
+              color: '#e5e7eb',
               marginBottom: '30px',
               lineHeight: '1.8',
             }}>
@@ -98,13 +99,13 @@ const SecondSection = () => {
                     <h4 style={{
                       fontSize: '18px',
                       marginBottom: '5px',
-                      color: '#1f2937',
+                      color: '#ffffff',
                     }}>
                       {item.title}
                     </h4>
                     <p style={{
                       fontSize: '16px',
-                      color: '#6b7280',
+                      color: '#d1d5db',
                     }}>
                       {item.desc}
                     </p>
@@ -171,6 +172,7 @@ const SecondSection = () => {
           </motion.div>
         </div>
       </div>
+      </ParticleBackground>
     </section>
   )
 }

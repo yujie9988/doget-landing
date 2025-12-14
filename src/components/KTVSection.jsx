@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslation } from '../locales'
+import ParticleBackground from './ParticleBackground'
 
 const KTVSection = () => {
   const { language } = useLanguage()
@@ -9,9 +10,9 @@ const KTVSection = () => {
 
   return (
     <section className="section" style={{
-      backgroundColor: 'white',
       overflow: 'hidden',
     }}>
+      <ParticleBackground>
       <div className="container">
         <div style={{
           display: 'grid',
@@ -48,14 +49,14 @@ const KTVSection = () => {
             <h2 style={{
               fontSize: '48px',
               marginBottom: '24px',
-              color: '#1f2937',
+              color: '#ffffff',
             }}>
               {t.ktvSection.title}
             </h2>
 
             <p style={{
               fontSize: '18px',
-              color: '#6b7280',
+              color: '#e5e7eb',
               marginBottom: '30px',
               lineHeight: '1.8',
             }}>
@@ -95,13 +96,13 @@ const KTVSection = () => {
                     <h4 style={{
                       fontSize: '18px',
                       marginBottom: '5px',
-                      color: '#1f2937',
+                      color: '#ffffff',
                     }}>
                       {item.title}
                     </h4>
                     <p style={{
                       fontSize: '16px',
-                      color: '#6b7280',
+                      color: '#d1d5db',
                     }}>
                       {item.desc}
                     </p>
@@ -122,12 +123,13 @@ const KTVSection = () => {
             }}
           >
             <div style={{
-              backgroundColor: 'white',
+              backgroundColor: 'rgba(255, 255, 255, 0.05)',
               borderRadius: '30px',
               padding: '30px',
-              boxShadow: '0 20px 60px rgba(0,0,0,0.1)',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
               maxWidth: '450px',
               margin: '0 auto',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
             }}>
               {/* 群聊標題 */}
               <div style={{
@@ -151,8 +153,8 @@ const KTVSection = () => {
                   🏋️
                 </div>
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: '18px', fontWeight: '600' }}>{t.ktvSection.chatRoom.title}</div>
-                  <div style={{ fontSize: '14px', color: '#6b7280' }}>128 {t.ktvSection.chatRoom.online}</div>
+                  <div style={{ fontSize: '18px', fontWeight: '600', color: '#ffffff' }}>{t.ktvSection.chatRoom.title}</div>
+                  <div style={{ fontSize: '14px', color: '#d1d5db' }}>128 {t.ktvSection.chatRoom.online}</div>
                 </div>
               </div>
 
@@ -199,15 +201,15 @@ const KTVSection = () => {
                         gap: '10px',
                         marginBottom: '5px',
                       }}>
-                        <span style={{ fontSize: '14px', fontWeight: '600' }}>{item.user}</span>
+                        <span style={{ fontSize: '14px', fontWeight: '600', color: '#ffffff' }}>{item.user}</span>
                         <span style={{ fontSize: '12px', color: '#9ca3af' }}>{item.time}</span>
                       </div>
                       <div style={{
-                        backgroundColor: '#f3f4f6',
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
                         padding: '10px 15px',
                         borderRadius: '15px',
                         fontSize: '15px',
-                        color: '#1f2937',
+                        color: '#e5e7eb',
                       }}>
                         {item.msg}
                       </div>
@@ -225,13 +227,13 @@ const KTVSection = () => {
                 style={{
                   marginTop: '25px',
                   paddingTop: '20px',
-                  borderTop: '1px solid #e5e7eb',
+                  borderTop: '1px solid rgba(255, 255, 255, 0.1)',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '10px',
                 }}
               >
-                <div style={{ fontSize: '14px', color: '#6b7280' }}>{t.ktvSection.chatRoom.onlineLabel}</div>
+                <div style={{ fontSize: '14px', color: '#d1d5db' }}>{t.ktvSection.chatRoom.onlineLabel}</div>
                 <div style={{ display: 'flex', marginLeft: '-5px' }}>
                   {['💪', '🏃', '🧘', '🤸', '🚴', '⛹️'].map((emoji, i) => (
                     <motion.div
@@ -257,12 +259,13 @@ const KTVSection = () => {
                     </motion.div>
                   ))}
                 </div>
-                <div style={{ fontSize: '14px', color: '#6b7280', marginLeft: '5px' }}>+122</div>
+                <div style={{ fontSize: '14px', color: '#d1d5db', marginLeft: '5px' }}>+122</div>
               </motion.div>
             </div>
           </motion.div>
         </div>
       </div>
+      </ParticleBackground>
     </section>
   )
 }

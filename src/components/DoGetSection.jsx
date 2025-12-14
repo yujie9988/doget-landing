@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslation } from '../locales'
+import ParticleBackground from './ParticleBackground'
 
 const DoGetSection = () => {
   const { language } = useLanguage()
@@ -9,9 +10,9 @@ const DoGetSection = () => {
 
   return (
     <section id="doget" className="section" style={{
-      backgroundColor: 'white',
       overflow: 'hidden',
     }}>
+      <ParticleBackground>
       <div className="container">
         <div style={{
           display: 'grid',
@@ -48,14 +49,14 @@ const DoGetSection = () => {
             <h2 style={{
               fontSize: '48px',
               marginBottom: '24px',
-              color: '#1f2937',
+              color: '#ffffff',
             }}>
               {t.dogetSection.title}
             </h2>
 
             <p style={{
               fontSize: '18px',
-              color: '#6b7280',
+              color: '#e5e7eb',
               marginBottom: '30px',
               lineHeight: '1.8',
             }}>
@@ -94,13 +95,13 @@ const DoGetSection = () => {
                     <h4 style={{
                       fontSize: '18px',
                       marginBottom: '5px',
-                      color: '#1f2937',
+                      color: '#ffffff',
                     }}>
                       {item.title}
                     </h4>
                     <p style={{
                       fontSize: '16px',
-                      color: '#6b7280',
+                      color: '#d1d5db',
                     }}>
                       {item.desc}
                     </p>
@@ -201,6 +202,7 @@ const DoGetSection = () => {
           </motion.div>
         </div>
       </div>
+      </ParticleBackground>
     </section>
   )
 }

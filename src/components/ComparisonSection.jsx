@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslation } from '../locales'
+import ParticleBackground from './ParticleBackground'
 
 const ComparisonSection = () => {
   const { language } = useLanguage()
@@ -9,9 +10,9 @@ const ComparisonSection = () => {
 
   return (
     <section className="section" style={{
-      backgroundColor: 'white',
       overflow: 'hidden',
     }}>
+      <ParticleBackground>
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,14 +40,14 @@ const ComparisonSection = () => {
           <h2 style={{
             fontSize: '48px',
             marginBottom: '20px',
-            color: '#1f2937',
+            color: '#ffffff',
           }}>
             {t.comparisonSection.title}
           </h2>
 
           <p style={{
             fontSize: '20px',
-            color: '#6b7280',
+            color: '#e5e7eb',
             maxWidth: '800px',
             margin: '0 auto',
             lineHeight: '1.8',
@@ -67,10 +68,11 @@ const ComparisonSection = () => {
           style={{
             maxWidth: '1000px',
             margin: '0 auto 60px',
-            backgroundColor: '#f9fafb',
+            backgroundColor: 'rgba(255, 255, 255, 0.05)',
             borderRadius: '20px',
             padding: '40px',
-            boxShadow: '0 10px 40px rgba(0,0,0,0.08)',
+            boxShadow: '0 10px 40px rgba(0,0,0,0.3)',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
           }}
         >
           <div style={{
@@ -80,12 +82,12 @@ const ComparisonSection = () => {
             alignItems: 'center',
           }}>
             {/* 表頭 */}
-            <div style={{ fontSize: '18px', fontWeight: '600', color: '#6b7280' }}>{t.comparisonSection.tableHeader}</div>
-            <div style={{ fontSize: '18px', fontWeight: '700', color: '#6366f1', textAlign: 'center' }}>{t.comparisonSection.doget}</div>
+            <div style={{ fontSize: '18px', fontWeight: '600', color: '#d1d5db' }}>{t.comparisonSection.tableHeader}</div>
+            <div style={{ fontSize: '18px', fontWeight: '700', color: '#8b5cf6', textAlign: 'center' }}>{t.comparisonSection.doget}</div>
             <div style={{ fontSize: '18px', fontWeight: '600', color: '#9ca3af', textAlign: 'center' }}>{t.comparisonSection.others}</div>
 
             {/* 分隔線 */}
-            <div style={{ gridColumn: '1 / -1', height: '1px', backgroundColor: '#e5e7eb', margin: '10px 0' }} />
+            <div style={{ gridColumn: '1 / -1', height: '1px', backgroundColor: 'rgba(255, 255, 255, 0.1)', margin: '10px 0' }} />
 
             {/* 比較項目 */}
             {[
@@ -104,7 +106,7 @@ const ComparisonSection = () => {
                   transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
                   style={{
                     fontSize: '16px',
-                    color: '#1f2937',
+                    color: '#f3f4f6',
                     padding: '12px 0',
                   }}
                 >
@@ -161,11 +163,11 @@ const ComparisonSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 * index }}
               style={{
-                backgroundColor: 'white',
+                backgroundColor: 'rgba(255, 255, 255, 0.05)',
                 borderRadius: '20px',
                 padding: '35px',
-                boxShadow: '0 10px 40px rgba(0,0,0,0.08)',
-                border: '2px solid #f3f4f6',
+                boxShadow: '0 10px 40px rgba(0,0,0,0.3)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
               }}
             >
               <div style={{
@@ -177,13 +179,13 @@ const ComparisonSection = () => {
               <h3 style={{
                 fontSize: '22px',
                 marginBottom: '15px',
-                color: '#1f2937',
+                color: '#ffffff',
               }}>
                 {item.title}
               </h3>
               <p style={{
                 fontSize: '15px',
-                color: '#9ca3af',
+                color: '#d1d5db',
                 marginBottom: '15px',
                 lineHeight: '1.6',
               }}>
@@ -191,10 +193,10 @@ const ComparisonSection = () => {
               </p>
               <p style={{
                 fontSize: '16px',
-                color: '#6366f1',
+                color: '#a78bfa',
                 fontWeight: '600',
                 lineHeight: '1.7',
-                backgroundColor: '#ede9fe',
+                backgroundColor: 'rgba(139, 92, 246, 0.2)',
                 padding: '15px',
                 borderRadius: '12px',
               }}>
@@ -268,6 +270,7 @@ const ComparisonSection = () => {
           </div>
         </motion.div>
       </div>
+      </ParticleBackground>
     </section>
   )
 }

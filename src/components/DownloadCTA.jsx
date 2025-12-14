@@ -171,7 +171,8 @@ const DownloadCTA = () => {
               </motion.button>
             </motion.div>
 
-            <motion.div
+            {/* 暫時註解：App 尚未上線，之後會啟用這三個統計數據 */}
+            {/* <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -200,7 +201,7 @@ const DownloadCTA = () => {
                 <div style={{ fontSize: '28px', fontWeight: '700' }}>{t.downloadCTA.stats.matches.number}</div>
                 <div style={{ fontSize: '14px', opacity: 0.8 }}>{t.downloadCTA.stats.matches.label}</div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </div>
