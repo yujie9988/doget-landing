@@ -18,11 +18,19 @@ const Footer = () => {
       <ParticleBackground />
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '40px',
-          marginBottom: '40px',
+          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(10px)',
+          borderRadius: '30px',
+          padding: '50px 40px 30px',
+          border: '1px solid rgba(255, 255, 255, 0.2)',
+          boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
         }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '40px',
+            marginBottom: '40px',
+          }}>
           {/* 品牌區 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -211,6 +219,7 @@ const Footer = () => {
             Made with ❤️ for better connections
           </p>
         </motion.div>
+        </div>
       </div>
     </footer>
   )

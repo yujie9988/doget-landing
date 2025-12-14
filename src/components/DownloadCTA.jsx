@@ -22,61 +22,17 @@ const DownloadCTA = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            borderRadius: '40px',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            backdropFilter: 'blur(10px)',
+            borderRadius: '30px',
             padding: '80px 60px',
             textAlign: 'center',
             color: 'white',
-            position: 'relative',
-            overflow: 'hidden',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
           }}
         >
-          {/* 背景動畫 */}
-          <motion.div
-            animate={{
-              scale: [1, 1.2, 1],
-              rotate: [0, 90, 180],
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            style={{
-              position: 'absolute',
-              top: '-50%',
-              right: '-20%',
-              width: '400px',
-              height: '400px',
-              borderRadius: '50%',
-              background: 'rgba(255, 255, 255, 0.1)',
-              filter: 'blur(60px)',
-            }}
-          />
-
-          <motion.div
-            animate={{
-              scale: [1, 1.3, 1],
-              rotate: [180, 90, 0],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            style={{
-              position: 'absolute',
-              bottom: '-30%',
-              left: '-10%',
-              width: '350px',
-              height: '350px',
-              borderRadius: '50%',
-              background: 'rgba(255, 255, 255, 0.1)',
-              filter: 'blur(60px)',
-            }}
-          />
-
-          <div style={{ position: 'relative', zIndex: 1 }}>
+          <div>
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
@@ -205,7 +161,6 @@ const DownloadCTA = () => {
                 <div style={{ fontSize: '14px', opacity: 0.8 }}>{t.downloadCTA.stats.matches.label}</div>
               </div>
             </motion.div> */}
-          </div>
         </motion.div>
       </div>
     </section>
