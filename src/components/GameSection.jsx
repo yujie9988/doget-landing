@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslation } from '../locales'
+import ParticleBackground from './ParticleBackground'
 
 const GameSection = () => {
   const { language } = useLanguage()
@@ -9,32 +10,12 @@ const GameSection = () => {
 
   return (
     <section className="section" style={{
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      backgroundColor: '#1f2937',
       color: 'white',
       overflow: 'hidden',
       position: 'relative',
     }}>
-      {/* 背景裝飾 */}
-      <motion.div
-        animate={{
-          rotate: 360,
-        }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        style={{
-          position: 'absolute',
-          top: '-20%',
-          right: '-10%',
-          width: '600px',
-          height: '600px',
-          borderRadius: '50%',
-          background: 'rgba(255, 255, 255, 0.05)',
-          filter: 'blur(60px)',
-        }}
-      />
+      <ParticleBackground />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div

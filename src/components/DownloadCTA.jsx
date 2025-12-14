@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslation } from '../locales'
+import ParticleBackground from './ParticleBackground'
 
 const DownloadCTA = () => {
   const { language } = useLanguage()
@@ -9,10 +10,12 @@ const DownloadCTA = () => {
 
   return (
     <section id="download" className="section" style={{
-      backgroundColor: '#f9fafb',
+      backgroundColor: '#1f2937',
       overflow: 'hidden',
+      position: 'relative',
     }}>
-      <div className="container">
+      <ParticleBackground />
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

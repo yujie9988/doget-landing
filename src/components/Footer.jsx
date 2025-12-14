@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../contexts/LanguageContext'
 import { getTranslation } from '../locales'
+import ParticleBackground from './ParticleBackground'
 
 const Footer = () => {
   const { language } = useLanguage()
@@ -12,8 +13,10 @@ const Footer = () => {
       backgroundColor: '#1f2937',
       color: 'white',
       padding: '60px 0 30px',
+      position: 'relative',
     }}>
-      <div className="container">
+      <ParticleBackground />
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
