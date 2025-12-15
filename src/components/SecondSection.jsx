@@ -17,7 +17,7 @@ const SecondSection = () => {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
+          gridTemplateColumns: '1fr 1.3fr',
           gap: '60px',
           alignItems: 'center',
         }}
