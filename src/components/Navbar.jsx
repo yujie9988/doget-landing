@@ -28,12 +28,10 @@ const Navbar = () => {
         left: 0,
         right: 0,
         zIndex: 1000,
-        // Tinder 風格黑色漸層背景
-        background: scrolled
-          ? 'linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.85) 100%)'
-          : 'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%)',
+        // 統一使用深色背景，在所有頁面保持一致
+        background: 'linear-gradient(180deg, rgba(31, 41, 55, 0.98) 0%, rgba(31, 41, 55, 0.95) 100%)',
         backdropFilter: 'blur(10px)',
-        boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.3)' : 'none',
+        boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.3)' : '0 1px 3px rgba(0,0,0,0.1)',
         transition: 'all 0.3s ease',
         height: '64px',
       }}
