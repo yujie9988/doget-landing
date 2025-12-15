@@ -12,20 +12,22 @@ const Footer = () => {
     <footer style={{
       backgroundColor: '#1f2937',
       color: 'white',
-      padding: '60px 0 30px',
+      padding: '60px 0 0',
       position: 'relative',
     }}>
       <ParticleBackground />
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{
-          backgroundColor: 'rgba(255, 255, 255, 0.1)',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
-          borderRadius: '30px',
-          padding: '50px 40px 30px',
-          border: '1px solid rgba(255, 255, 255, 0.2)',
-          boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
-        }}>
+      <div style={{
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+        padding: '50px 0 30px',
+        borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+        boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+        position: 'relative',
+        zIndex: 1,
+      }}>
+        <div className="container">
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
@@ -201,25 +203,25 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* 版權信息 */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          style={{
-            paddingTop: '30px',
-            borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-            textAlign: 'center',
-            fontSize: '14px',
-            opacity: 0.6,
-          }}
-        >
-          <p>© 2025 DoGet. All rights reserved.</p>
-          <p style={{ marginTop: '5px' }}>
-            Made with ❤️ for better connections
-          </p>
-        </motion.div>
+          {/* 版權信息 */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            style={{
+              paddingTop: '30px',
+              borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+              textAlign: 'center',
+              fontSize: '14px',
+              opacity: 0.6,
+            }}
+          >
+            <p>© 2025 DoGet. All rights reserved.</p>
+            <p style={{ marginTop: '5px' }}>
+              Made with ❤️ for better connections
+            </p>
+          </motion.div>
         </div>
       </div>
     </footer>
