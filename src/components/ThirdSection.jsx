@@ -16,22 +16,13 @@ const ThirdSection = () => {
       <ParticleBackground />
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{
-          backgroundColor: 'rgba(255, 255, 255, 0.1)',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
-          borderRadius: '30px',
-          padding: '80px 60px',
-          border: '1px solid rgba(255, 255, 255, 0.2)',
-          boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
-        }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '60px',
-            alignItems: 'center',
-          }}
-          className="responsive-grid"
-          >
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '60px',
+          alignItems: 'center',
+        }}
+        className="responsive-grid"
+        >
           {/* 左側：YouTube 影片位置 */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -147,10 +138,19 @@ const ThirdSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  whileHover={{ y: -5 }}
                   style={{
                     display: 'flex',
                     alignItems: 'flex-start',
                     gap: '15px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    backdropFilter: 'blur(10px)',
+                    WebkitBackdropFilter: 'blur(10px)',
+                    borderRadius: '20px',
+                    padding: '25px',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.3)',
+                    transition: 'all 0.3s ease',
                   }}
                 >
                   <div style={{
@@ -178,7 +178,6 @@ const ThirdSection = () => {
               ))}
             </div>
           </motion.div>
-          </div>
         </div>
       </div>
     </section>
