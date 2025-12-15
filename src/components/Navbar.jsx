@@ -36,7 +36,7 @@ const Navbar = () => {
         // 根據頁面使用不同的背景邏輯
         background: isFeaturesPage
           ? scrolled
-            ? 'linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.85) 100%)' // 功能頁滾動時：半透明黑色
+            ? 'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%)' // 功能頁滾動時：與首頁相同透明度
             : 'linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%)' // 功能頁頂部：100% 不透明純黑色
           : 'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%)', // 首頁：固定透明度
         backdropFilter: 'blur(10px)',
