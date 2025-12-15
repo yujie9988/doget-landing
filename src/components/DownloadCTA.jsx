@@ -162,6 +162,7 @@ const DownloadCTA = () => {
                 <div style={{ fontSize: '14px', opacity: 0.8 }}>{t.downloadCTA.stats.matches.label}</div>
               </div>
             </motion.div> */}
+          </div>
         </motion.div>
       </div>
     </section>
