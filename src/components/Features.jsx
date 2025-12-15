@@ -82,47 +82,57 @@ const Features = () => {
       backgroundColor: '#f9fafb',
     }}>
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          style={{
-            textAlign: 'center',
-            marginBottom: '60px',
-          }}
-        >
-          <h2 style={{
-            fontSize: '48px',
-            marginBottom: '20px',
-            background: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }}>
-            強大的功能
-          </h2>
-          <p style={{
-            fontSize: '20px',
-            color: '#6b7280',
-            maxWidth: '600px',
-            margin: '0 auto',
-          }}>
-            一站式社交平台，滿足你所有的社交需求
-          </p>
-        </motion.div>
-
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '30px',
+          backgroundColor: 'rgba(255, 255, 255, 0.6)',
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          borderRadius: '30px',
+          padding: '80px 60px',
+          border: '1px solid rgba(255, 255, 255, 0.8)',
+          boxShadow: '0 20px 60px rgba(0,0,0,0.08)',
         }}>
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              {...feature}
-              delay={index * 0.1}
-            />
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            style={{
+              textAlign: 'center',
+              marginBottom: '60px',
+            }}
+          >
+            <h2 style={{
+              fontSize: '48px',
+              marginBottom: '20px',
+              background: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}>
+              強大的功能
+            </h2>
+            <p style={{
+              fontSize: '20px',
+              color: '#6b7280',
+              maxWidth: '600px',
+              margin: '0 auto',
+            }}>
+              一站式社交平台，滿足你所有的社交需求
+            </p>
+          </motion.div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '30px',
+          }}>
+            {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                {...feature}
+                delay={index * 0.1}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
