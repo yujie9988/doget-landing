@@ -57,7 +57,7 @@ img {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 60px 0;
 }
 
 /* 響應式網格布局 */
@@ -70,7 +70,7 @@ img {
 
 @media (max-width: 768px) {
   .section {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   /* 在小螢幕上改為單列布局 */
