@@ -14,11 +14,13 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      // 功能介紹頁面：只要離開頂部就觸發（scrollY > 10）
+      // 首頁：滾動超過 50px 才觸發（用於陰影效果）
+      setScrolled(isFeaturesPage ? window.scrollY > 10 : window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [isFeaturesPage])
 
   return (
     <motion.nav
