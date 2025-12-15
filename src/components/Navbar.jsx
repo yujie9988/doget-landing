@@ -9,6 +9,9 @@ const Navbar = () => {
   const { language, toggleLanguage } = useLanguage()
   const t = getTranslation(language)
 
+  // 檢測當前是否在功能介紹頁面
+  const isFeaturesPage = window.location.pathname === '/features'
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
@@ -28,10 +31,14 @@ const Navbar = () => {
         left: 0,
         right: 0,
         zIndex: 1000,
-        // 統一使用深色背景，在所有頁面保持一致
-        background: 'linear-gradient(180deg, rgba(31, 41, 55, 0.98) 0%, rgba(31, 41, 55, 0.95) 100%)',
+        // 根據頁面使用不同的背景
+        background: isFeaturesPage
+          ? 'linear-gradient(180deg, rgba(31, 41, 55, 0.98) 0%, rgba(31, 41, 55, 0.95) 100%)'
+          : scrolled
+            ? 'linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.85) 100%)'
+            : 'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%)',
         backdropFilter: 'blur(10px)',
-        boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.3)' : '0 1px 3px rgba(0,0,0,0.1)',
+        boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.3)' : (isFeaturesPage ? '0 1px 3px rgba(0,0,0,0.1)' : 'none'),
         transition: 'all 0.3s ease',
         height: '64px',
       }}
