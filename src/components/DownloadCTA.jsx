@@ -26,7 +26,7 @@ const DownloadCTA = () => {
             backdropFilter: 'blur(10px)',
             WebkitBackdropFilter: 'blur(10px)',
             borderRadius: '30px',
-            padding: '80px 60px',
+            padding: 'clamp(40px, 8vw, 80px) clamp(20px, 6vw, 60px)',
             textAlign: 'center',
             color: 'white',
             border: '1px solid rgba(255, 255, 255, 0.2)',
@@ -40,7 +40,7 @@ const DownloadCTA = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               style={{
-                fontSize: '80px',
+                fontSize: 'clamp(50px, 10vw, 80px)',
                 marginBottom: '30px',
               }}
             >
@@ -53,7 +53,7 @@ const DownloadCTA = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
               style={{
-                fontSize: '48px',
+                fontSize: 'clamp(32px, 6vw, 48px)',
                 marginBottom: '20px',
                 fontWeight: '800',
               }}
@@ -67,7 +67,7 @@ const DownloadCTA = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
               style={{
-                fontSize: '20px',
+                fontSize: 'clamp(16px, 3vw, 20px)',
                 marginBottom: '40px',
                 opacity: 0.95,
                 maxWidth: '600px',
@@ -95,9 +95,9 @@ const DownloadCTA = () => {
                 style={{
                   backgroundColor: 'white',
                   color: '#6366f1',
-                  padding: '18px 45px',
+                  padding: 'clamp(14px, 2vw, 18px) clamp(28px, 5vw, 45px)',
                   borderRadius: '30px',
-                  fontSize: '18px',
+                  fontSize: 'clamp(15px, 2.5vw, 18px)',
                   fontWeight: '600',
                   boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
                   display: 'flex',
@@ -105,7 +105,7 @@ const DownloadCTA = () => {
                   gap: '12px',
                 }}
               >
-                <span style={{ fontSize: '24px' }}></span>
+                <span style={{ fontSize: 'clamp(20px, 3vw, 24px)' }}></span>
                 {t.downloadCTA.appStore}
               </motion.button>
 
@@ -115,9 +115,9 @@ const DownloadCTA = () => {
                 style={{
                   backgroundColor: 'rgba(255, 255, 255, 0.2)',
                   color: 'white',
-                  padding: '18px 45px',
+                  padding: 'clamp(14px, 2vw, 18px) clamp(28px, 5vw, 45px)',
                   borderRadius: '30px',
-                  fontSize: '18px',
+                  fontSize: 'clamp(15px, 2.5vw, 18px)',
                   fontWeight: '600',
                   border: '2px solid white',
                   backdropFilter: 'blur(10px)',
@@ -126,7 +126,7 @@ const DownloadCTA = () => {
                   gap: '12px',
                 }}
               >
-                <span style={{ fontSize: '24px' }}></span>
+                <span style={{ fontSize: 'clamp(20px, 3vw, 24px)' }}></span>
                 {t.downloadCTA.googlePlay}
               </motion.button>
             </motion.div>

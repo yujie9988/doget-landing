@@ -15,14 +15,7 @@ const SecondSection = () => {
     }}>
       <ParticleBackground />
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1.3fr',
-          gap: '60px',
-          alignItems: 'center',
-        }}
-        className="responsive-grid"
-        >
+        <div className="responsive-grid">
           {/* 左側：文字內容 */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -50,7 +43,7 @@ const SecondSection = () => {
             </motion.div>
 
             <h2 style={{
-              fontSize: '48px',
+              fontSize: 'clamp(32px, 6vw, 48px)',
               marginBottom: '24px',
               color: '#ffffff',
             }}>
@@ -58,7 +51,7 @@ const SecondSection = () => {
             </h2>
 
             <p style={{
-              fontSize: '18px',
+              fontSize: 'clamp(16px, 2.5vw, 18px)',
               color: '#e5e7eb',
               marginBottom: '30px',
               lineHeight: '1.8',

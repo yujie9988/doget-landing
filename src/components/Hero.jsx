@@ -177,7 +177,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             style={{
-              fontSize: '24px',
+              fontSize: 'clamp(16px, 3vw, 24px)',
               opacity: 0.95,
               maxWidth: '700px',
               margin: '0 auto 30px',
@@ -207,9 +207,9 @@ const Hero = () => {
               style={{
                 backgroundColor: 'white',
                 color: '#6366f1',
-                padding: '16px 40px',
+                padding: 'clamp(12px, 2vw, 16px) clamp(24px, 5vw, 40px)',
                 borderRadius: '30px',
-                fontSize: '18px',
+                fontSize: 'clamp(15px, 2.5vw, 18px)',
                 fontWeight: '600',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
               }}
@@ -223,9 +223,9 @@ const Hero = () => {
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.2)',
                 color: 'white',
-                padding: '16px 40px',
+                padding: 'clamp(12px, 2vw, 16px) clamp(24px, 5vw, 40px)',
                 borderRadius: '30px',
-                fontSize: '18px',
+                fontSize: 'clamp(15px, 2.5vw, 18px)',
                 fontWeight: '600',
                 border: '2px solid white',
                 backdropFilter: 'blur(10px)',

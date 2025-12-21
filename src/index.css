@@ -68,6 +68,19 @@ img {
   align-items: center;
 }
 
+/* Navbar 響應式 */
+.desktop-nav {
+  display: flex;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 40px 0;
@@ -76,6 +89,31 @@ img {
   /* 在小螢幕上改為單列布局 */
   .responsive-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Navbar 手機版 */
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: block !important;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  /* 容器內邊距調整 */
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* 平板和小螢幕優化 */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .responsive-grid {
     gap: 40px;
   }
 }

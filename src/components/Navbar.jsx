@@ -6,6 +6,7 @@ import { getTranslation } from '../locales'
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
   const [showLangMenu, setShowLangMenu] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { language, toggleLanguage } = useLanguage()
   const t = getTranslation(language)
 
@@ -76,12 +77,14 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* 導航連結 */}
+        {/* 桌面版導航連結 */}
         <div style={{
           display: 'flex',
           gap: '40px',
           alignItems: 'center',
-        }}>
+        }}
+        className="desktop-nav"
+        >
           <a href="/" style={{
             color: '#ffffff',
             fontWeight: '500',
@@ -243,7 +246,155 @@ const Navbar = () => {
           }}
           >{t.navbar.download}</a>
         </div>
-      </div>
+
+        {/* 手機版漢堡選單按鈕 */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          style={{
+            display: 'none',
+            backgroundColor: 'transparent',
+            border: 'none',
+            color: '#ffffff',
+            fontSize: '28px',
+            cursor: 'pointer',
+            padding: '8px',
+          }}
+          className="mobile-menu-btn"
+        >
+          {mobileMenuOpen ? '✕' : '☰'}
+        </button>
+
+      {/* 手機版選單面板 */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{
+              backgroundColor: 'rgba(0, 0, 0, 0.98)',
+              backdropFilter: 'blur(10px)',
+              borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+              overflow: 'hidden',
+            }}
+            className="mobile-menu"
+          >
+            <div className="container" style={{
+              padding: '20px 32px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '20px',
+            }}>
+              <a
+                href="/"
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  color: '#ffffff',
+                  fontWeight: '500',
+                  fontSize: '16px',
+                  textDecoration: 'none',
+                  padding: '12px 0',
+                  borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+                }}
+              >
+                {t.navbar.home}
+              </a>
+
+              <a
+                href="/features"
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  color: '#ffffff',
+                  fontWeight: '500',
+                  fontSize: '16px',
+                  textDecoration: 'none',
+                  padding: '12px 0',
+                  borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+                }}
+              >
+                {t.navbar.features}
+              </a>
+
+              {/* 手機版語言切換 */}
+              <div style={{
+                padding: '12px 0',
+                borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+              }}>
+                <div style={{
+                  color: '#ffffff',
+                  fontSize: '14px',
+                  marginBottom: '12px',
+                  opacity: 0.7,
+                }}>
+                  語言 / Language
+                </div>
+                <div style={{
+                  display: 'flex',
+                  gap: '12px',
+                }}>
+                  <button
+                    onClick={() => {
+                      toggleLanguage('zh-TW')
+                      setMobileMenuOpen(false)
+                    }}
+                    style={{
+                      flex: 1,
+                      padding: '10px 20px',
+                      borderRadius: '20px',
+                      border: '1px solid rgba(255, 255, 255, 0.3)',
+                      backgroundColor: language === 'zh-TW' ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
+                      color: '#ffffff',
+                      fontSize: '14px',
+                      fontWeight: language === 'zh-TW' ? '600' : '400',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    繁體中文
+                  </button>
+                  <button
+                    onClick={() => {
+                      toggleLanguage('en')
+                      setMobileMenuOpen(false)
+                    }}
+                    style={{
+                      flex: 1,
+                      padding: '10px 20px',
+                      borderRadius: '20px',
+                      border: '1px solid rgba(255, 255, 255, 0.3)',
+                      backgroundColor: language === 'en' ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
+                      color: '#ffffff',
+                      fontSize: '14px',
+                      fontWeight: language === 'en' ? '600' : '400',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    English
+                  </button>
+                </div>
+              </div>
+
+              <a
+                href="#download"
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  backgroundColor: '#ffffff',
+                  color: '#000000',
+                  padding: '14px 28px',
+                  borderRadius: '30px',
+                  fontWeight: '600',
+                  fontSize: '16px',
+                  textDecoration: 'none',
+                  textAlign: 'center',
+                  marginTop: '10px',
+                }}
+              >
+                {t.navbar.download}
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   )
 }
