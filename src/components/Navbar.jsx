@@ -263,6 +263,7 @@ const Navbar = () => {
         >
           {mobileMenuOpen ? '✕' : '☰'}
         </button>
+      </div>
 
       {/* 手機版選單面板 */}
       <AnimatePresence>
