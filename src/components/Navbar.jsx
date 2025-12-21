@@ -52,7 +52,6 @@ const Navbar = () => {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '0 32px',
         height: '100%',
         maxWidth: '1200px',
         margin: '0 auto',
