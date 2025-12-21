@@ -97,14 +97,14 @@ const Footer = () => {
               fontWeight: '600',
               marginBottom: '20px',
             }}>
-              產品
+              {t.footer.product.title}
             </h4>
             <ul style={{
               listStyle: 'none',
               padding: 0,
               margin: 0,
             }}>
-              {['DoGet 配對', '實時聊天', 'KTV 社群', '成就系統'].map((item, index) => (
+              {t.footer.product.items.map((item, index) => (
                 <li key={index} style={{
                   marginBottom: '12px',
                 }}>
@@ -136,14 +136,14 @@ const Footer = () => {
               fontWeight: '600',
               marginBottom: '20px',
             }}>
-              公司
+              {t.footer.company.title}
             </h4>
             <ul style={{
               listStyle: 'none',
               padding: 0,
               margin: 0,
             }}>
-              {['關於我們', '聯絡我們', '隱私政策', '服務條款'].map((item, index) => (
+              {t.footer.company.items.map((item, index) => (
                 <li key={index} style={{
                   marginBottom: '12px',
                 }}>
@@ -175,14 +175,14 @@ const Footer = () => {
               fontWeight: '600',
               marginBottom: '20px',
             }}>
-              支援
+              {t.footer.support.title}
             </h4>
             <ul style={{
               listStyle: 'none',
               padding: 0,
               margin: 0,
             }}>
-              {['幫助中心', '常見問題', '用戶反饋', '安全中心'].map((item, index) => (
+              {t.footer.support.items.map((item, index) => (
                 <li key={index} style={{
                   marginBottom: '12px',
                 }}>
@@ -217,9 +217,9 @@ const Footer = () => {
               opacity: 0.6,
             }}
           >
-            <p>© 2025 DoGet. All rights reserved.</p>
+            <p>{t.footer.copyright}</p>
             <p style={{ marginTop: '5px' }}>
-              Made with ❤️ for better connections
+              {t.footer.madeWith}
             </p>
           </motion.div>
         </div>

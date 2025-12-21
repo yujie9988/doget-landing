@@ -224,6 +224,7 @@ export const zhTW = {
 
   // Download CTA
   downloadCTA: {
+    icon: '🚀',
     title: '準備好開始了嗎？',
     description: '立即下載 DoGet，發現身邊有趣的人，開啟全新的社交體驗',
     appStore: 'App Store',
@@ -249,26 +250,17 @@ export const zhTW = {
     description: 'DoGet - 基於地點的智能社交平台，讓你在熟悉的場所自然認識新朋友。',
     product: {
       title: '產品',
-      features: '功能介紹',
-      download: '下載應用',
-      pricing: '價格方案',
+      items: ['DoGet 配對', '實時聊天', 'KTV 社群', '成就系統'],
     },
     company: {
       title: '公司',
-      about: '關於我們',
-      blog: '部落格',
-      careers: '加入我們',
+      items: ['關於我們', '聯絡我們', '隱私政策', '服務條款'],
     },
     support: {
       title: '支援',
-      help: '幫助中心',
-      contact: '聯絡我們',
-      privacy: '隱私政策',
-      terms: '服務條款',
+      items: ['幫助中心', '常見問題', '用戶反饋', '安全中心'],
     },
-    social: {
-      title: '社群媒體',
-    },
-    copyright: '© 2024 DoGet. 版權所有。',
+    copyright: '© 2025 DoGet. 版權所有。',
+    madeWith: '用心打造更好的連結 ❤️',
   },
 }

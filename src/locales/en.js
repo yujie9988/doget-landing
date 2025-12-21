@@ -224,6 +224,7 @@ export const en = {
 
   // Download CTA
   downloadCTA: {
+    icon: '🚀',
     title: 'Ready to Get Started?',
     description: 'Download DoGet now, discover interesting people around you, and start a brand new social experience',
     appStore: 'App Store',
@@ -249,26 +250,17 @@ export const en = {
     description: 'DoGet - A smart social platform based on locations, helping you naturally meet new friends at familiar places.',
     product: {
       title: 'Product',
-      features: 'Features',
-      download: 'Download',
-      pricing: 'Pricing',
+      items: ['DoGet Matching', 'Real-time Chat', 'KTV Community', 'Achievement System'],
     },
     company: {
       title: 'Company',
-      about: 'About Us',
-      blog: 'Blog',
-      careers: 'Careers',
+      items: ['About Us', 'Contact Us', 'Privacy Policy', 'Terms of Service'],
     },
     support: {
       title: 'Support',
-      help: 'Help Center',
-      contact: 'Contact Us',
-      privacy: 'Privacy Policy',
-      terms: 'Terms of Service',
+      items: ['Help Center', 'FAQ', 'User Feedback', 'Safety Center'],
     },
-    social: {
-      title: 'Social Media',
-    },
-    copyright: '© 2024 DoGet. All rights reserved.',
+    copyright: '© 2025 DoGet. All rights reserved.',
+    madeWith: 'Made with ❤️ for better connections',
   },
 }
