@@ -201,24 +201,36 @@ export const zhTW = {
   // Game Section
   gameSection: {
     badge: '互動遊戲',
-    title: '趣味社交遊戲',
-    description: '透過有趣的互動遊戲打破冰牆，讓認識新朋友變得更自然、更有趣。',
-    features: {
-      icebreaker: {
-        icon: '🎮',
-        title: '破冰遊戲',
-        desc: '輕鬆開啟話題，消除尷尬',
+    title: '遊戲化社交體驗',
+    description: '完整的成就、等級、稱號系統，讓社交變得更有趣',
+    cards: {
+      level: {
+        icon: '⭐',
+        title: '等級系統',
+        desc: '累積經驗值提升等級',
+        items: ['經驗值累積', '等級提升獎勵', '會員 VIP 系統', '經驗倍數加成'],
       },
-      challenge: {
+      achievement: {
         icon: '🏆',
-        title: '挑戰任務',
-        desc: '完成任務獲得獎勵和徽章',
+        title: '成就徽章',
+        desc: '解鎖各種成就稱號',
+        items: ['成就徽章解鎖', '自動經驗獎勵', '成就進度追踪', '稱號收集系統'],
       },
-      multiplayer: {
-        icon: '👫',
-        title: '多人互動',
-        desc: '邀請朋友一起參與遊戲',
+      gift: {
+        icon: '🎁',
+        title: '禮物系統',
+        desc: '收集和使用各種禮物',
+        items: ['禮物盒管理', '兌換碼系統', '每日登錄獎勵', '禮物歷史記錄'],
       },
+    },
+    moreFeatures: {
+      title: '更多特色功能',
+      items: [
+        { title: '智能位置', desc: '後台位置追踪與天氣' },
+        { title: '安全保護', desc: '多重驗證與舉報系統' },
+        { title: '暫時好友', desc: '創新的臨時聊天功能' },
+        { title: 'FCM 推送', desc: '離線消息即時通知' },
+      ],
     },
   },
 

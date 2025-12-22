@@ -201,24 +201,36 @@ export const en = {
   // Game Section
   gameSection: {
     badge: 'Interactive Games',
-    title: 'Fun Social Games',
-    description: 'Break the ice with fun interactive games, making meeting new friends more natural and enjoyable.',
-    features: {
-      icebreaker: {
-        icon: '🎮',
-        title: 'Icebreaker Games',
-        desc: 'Easily start conversations and eliminate awkwardness',
+    title: 'Gamified Social Experience',
+    description: 'Complete achievement, level, and title system makes socializing more fun',
+    cards: {
+      level: {
+        icon: '⭐',
+        title: 'Level System',
+        desc: 'Accumulate experience points to level up',
+        items: ['Experience accumulation', 'Level up rewards', 'VIP membership', 'Experience multiplier'],
       },
-      challenge: {
+      achievement: {
         icon: '🏆',
-        title: 'Challenge Missions',
-        desc: 'Complete missions to earn rewards and badges',
+        title: 'Achievement Badges',
+        desc: 'Unlock various achievements and titles',
+        items: ['Badge unlocking', 'Auto experience rewards', 'Progress tracking', 'Title collection'],
       },
-      multiplayer: {
-        icon: '👫',
-        title: 'Multiplayer Interaction',
-        desc: 'Invite friends to join games together',
+      gift: {
+        icon: '🎁',
+        title: 'Gift System',
+        desc: 'Collect and use various gifts',
+        items: ['Gift box management', 'Redeem code system', 'Daily login rewards', 'Gift history'],
       },
+    },
+    moreFeatures: {
+      title: 'More Features',
+      items: [
+        { title: 'Smart Location', desc: 'Background tracking & weather' },
+        { title: 'Safety Protection', desc: 'Multi-verification & report system' },
+        { title: 'Temporary Friends', desc: 'Innovative temporary chat' },
+        { title: 'FCM Push', desc: 'Offline message notifications' },
+      ],
     },
   },
 

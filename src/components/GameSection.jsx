@@ -42,19 +42,19 @@ const GameSection = () => {
           </motion.div>
 
           <h2 style={{
-            fontSize: '48px',
+            fontSize: 'clamp(32px, 6vw, 48px)',
             marginBottom: '20px',
           }}>
-            遊戲化社交體驗
+            {t.gameSection.title}
           </h2>
 
           <p style={{
-            fontSize: '20px',
+            fontSize: 'clamp(16px, 3vw, 20px)',
             opacity: 0.9,
             maxWidth: '600px',
             margin: '0 auto',
           }}>
-            完整的成就、等級、稱號系統，讓社交變得更有趣
+            {t.gameSection.description}
           </p>
         </motion.div>
 
@@ -66,24 +66,9 @@ const GameSection = () => {
           marginBottom: '60px',
         }}>
           {[
-            {
-              icon: '⭐',
-              title: '等級系統',
-              desc: '累積經驗值提升等級',
-              items: ['經驗值累積', '等級提升獎勵', '會員 VIP 系統', '經驗倍數加成']
-            },
-            {
-              icon: '🏆',
-              title: '成就徽章',
-              desc: '解鎖各種成就稱號',
-              items: ['成就徽章解鎖', '自動經驗獎勵', '成就進度追踪', '稱號收集系統']
-            },
-            {
-              icon: '🎁',
-              title: '禮物系統',
-              desc: '收集和使用各種禮物',
-              items: ['禮物盒管理', '兌換碼系統', '每日登錄獎勵', '禮物歷史記錄']
-            },
+            t.gameSection.cards.level,
+            t.gameSection.cards.achievement,
+            t.gameSection.cards.gift,
           ].map((card, index) => (
             <motion.div
               key={index}
@@ -172,11 +157,11 @@ const GameSection = () => {
           }}
         >
           <h3 style={{
-            fontSize: '32px',
+            fontSize: 'clamp(24px, 4vw, 32px)',
             marginBottom: '30px',
             textAlign: 'center',
           }}>
-            更多特色功能
+            {t.gameSection.moreFeatures.title}
           </h3>
 
           <div style={{
@@ -184,12 +169,7 @@ const GameSection = () => {
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '30px',
           }}>
-            {[
-              { title: '智能位置', desc: '後台位置追踪與天氣' },
-              { title: '安全保護', desc: '多重驗證與舉報系統' },
-              { title: '暫時好友', desc: '創新的臨時聊天功能' },
-              { title: 'FCM 推送', desc: '離線消息即時通知' },
-            ].map((item, index) => (
+            {t.gameSection.moreFeatures.items.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
