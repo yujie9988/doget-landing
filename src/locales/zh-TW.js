@@ -84,12 +84,10 @@ export const zhTW = {
     features: {
       location: '基於真實地點配對',
       filterFake: '利用配對機制過濾假帳號',
-      realUsers: '確保用戶真實存在',
+      realUsers: '用戶實際參與確保其他使用者真實存在',
       interests: '共同興趣篩選',
       report: '舉報和封禁系統',
       chat: '實時聊天',
-      eventVerification: '實體活動認證',
-      groupChat: '店家類型群組聊天室',
     },
     highlights: {
       classmate: {
@@ -231,6 +229,7 @@ export const zhTW = {
         { title: '智能位置', desc: '後台位置追踪與天氣' },
         { title: '安全保護', desc: '多重驗證與舉報系統' },
         { title: '暫時好友', desc: '創新的臨時聊天功能' },
+        { title: 'FCM 推送', desc: '離線消息即時通知' },
       ],
     },
   },
@@ -261,78 +260,19 @@ export const zhTW = {
   // Footer
   footer: {
     description: 'DoGet - 基於地點的智能社交平台，讓你在熟悉的場所自然認識新朋友。',
+    product: {
+      title: '產品',
+      items: ['DoGet 配對', '實時聊天', 'KTV 社群', '成就系統'],
+    },
+    company: {
+      title: '公司',
+      items: ['關於我們', '聯絡我們', '隱私政策', '服務條款'],
+    },
     support: {
       title: '支援',
-      items: {
-        terms: '用戶協議',
-        privacy: '隱私政策',
-        feedback: '用戶反饋',
-      },
+      items: ['幫助中心', '常見問題', '用戶反饋', '安全中心'],
     },
     copyright: '© 2025 DoGet. 版權所有。',
-    madeWith: '用心打造更好的連結',
-  },
-
-  // Terms Page - 用戶協議
-  termsPage: {
-    title: '用戶協議',
-    subtitle: '請仔細閱讀以下條款',
-    sections: [
-      {
-        heading: '1. 服務條款',
-        content: '在此添加服務條款內容...',
-      },
-      {
-        heading: '2. 用戶責任',
-        content: '在此添加用戶責任內容...',
-      },
-      {
-        heading: '3. 帳戶安全',
-        content: '在此添加帳戶安全內容...',
-      },
-      // 可以繼續添加更多章節...
-    ],
-  },
-
-  // Privacy Page - 隱私政策
-  privacyPage: {
-    title: '隱私政策',
-    subtitle: '我們如何保護您的隱私',
-    sections: [
-      {
-        heading: '1. 資料收集',
-        content: '在此添加資料收集內容...',
-      },
-      {
-        heading: '2. 資料使用',
-        content: '在此添加資料使用內容...',
-      },
-      {
-        heading: '3. 資料保護',
-        content: '在此添加資料保護內容...',
-      },
-      // 可以繼續添加更多章節...
-    ],
-  },
-
-  // Feedback Page - 用戶反饋
-  feedbackPage: {
-    title: '用戶反饋',
-    subtitle: '我們重視您的意見',
-    sections: [
-      {
-        heading: '聯絡方式',
-        content: '如有任何問題或建議，請透過以下方式聯繫我們：',
-      },
-      {
-        heading: '電子郵件',
-        content: 'support@doget.app',
-      },
-      {
-        heading: '回覆時間',
-        content: '我們會在 1-3 個工作日內回覆您的訊息。',
-      },
-      // 可以繼續添加更多章節...
-    ],
+    madeWith: '用心打造更好的連結 ❤️',
   },
 }
