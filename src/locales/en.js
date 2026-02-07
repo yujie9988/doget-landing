@@ -269,7 +269,7 @@ export const en = {
         feedback: 'User Feedback',
       },
     },
-    copyright: '© 2025 DoGet. All rights reserved.',
+    copyright: '© 2026 DoGet. All rights reserved.',
     madeWith: 'Made with love for better connections',
   },
 

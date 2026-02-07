@@ -73,7 +73,7 @@ const Footer = () => {
             {/* 支援連結 - 橫向 */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
               {supportLinks.map((link, index) => (
-                <Link key={index} to={link.path} style={{
+                <Link key={index} to={link.path} onClick={() => window.scrollTo(0, 0)} style={{
                   color: 'white',
                   opacity: 0.7,
                   fontSize: '15px',

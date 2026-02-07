@@ -224,4 +224,4 @@ npm install
 
 ## 授權
 
-© 2025 DoGet. All rights reserved.
+© 2026 DoGet. All rights reserved.

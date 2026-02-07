@@ -66,14 +66,15 @@ const Navbar = () => {
           {/* <img src="/logo.png" alt="DoGet Logo" style={{ height: '40px', width: 'auto' }} /> */}
 
           {/* 文字 Logo（如果沒有圖片 logo 就使用這個） */}
-          <div style={{
+          <a href="/" style={{
             fontSize: '28px',
             fontWeight: 'bold',
             color: '#ffffff',
             letterSpacing: '-0.5px',
+            textDecoration: 'none',
           }}>
             DoGet
-          </div>
+          </a>
         </div>
 
         {/* 桌面版導航連結 */}

@@ -268,7 +268,7 @@ export const zhTW = {
         feedback: '用戶反饋',
       },
     },
-    copyright: '© 2025 DoGet. 版權所有。',
+    copyright: '© 2026 DoGet. 版權所有。',
     madeWith: '用心打造更好的連結',
   },
 
