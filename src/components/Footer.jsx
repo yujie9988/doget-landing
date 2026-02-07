@@ -35,79 +35,59 @@ const Footer = () => {
         zIndex: 1,
       }}>
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '40px',
-            marginBottom: '40px',
-          }}>
-          {/* 品牌區 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              gap: '20px',
+              marginBottom: '40px',
+            }}
           >
-            <div style={{
-              fontSize: '32px',
-              fontWeight: 'bold',
-              marginBottom: '15px',
-              background: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}>
-              DoGet
+            {/* 品牌區 */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+              <div style={{
+                fontSize: '32px',
+                fontWeight: 'bold',
+                background: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}>
+                DoGet
+              </div>
+              <p style={{
+                fontSize: '15px',
+                opacity: 0.8,
+                lineHeight: '1.6',
+                margin: 0,
+              }}>
+                {t.footer.description}
+              </p>
             </div>
-            <p style={{
-              fontSize: '16px',
-              opacity: 0.8,
-              lineHeight: '1.6',
-              marginBottom: '20px',
-            }}>
-              {t.footer.description}
-            </p>
-          </motion.div>
 
-          {/* 支援 */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <h4 style={{
-              fontSize: '18px',
-              fontWeight: '600',
-              marginBottom: '20px',
-            }}>
-              {t.footer.support.title}
-            </h4>
-            <ul style={{
-              listStyle: 'none',
-              padding: 0,
-              margin: 0,
-            }}>
+            {/* 支援連結 - 橫向 */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
               {supportLinks.map((link, index) => (
-                <li key={index} style={{
-                  marginBottom: '12px',
-                }}>
-                  <Link to={link.path} style={{
-                    color: 'white',
-                    opacity: 0.7,
-                    fontSize: '15px',
-                    transition: 'opacity 0.3s',
-                    textDecoration: 'none',
-                  }}
-                    onMouseEnter={(e) => e.target.style.opacity = '1'}
-                    onMouseLeave={(e) => e.target.style.opacity = '0.7'}
-                  >
-                    {t.footer.support.items[link.key]}
-                  </Link>
-                </li>
+                <Link key={index} to={link.path} style={{
+                  color: 'white',
+                  opacity: 0.7,
+                  fontSize: '15px',
+                  transition: 'opacity 0.3s',
+                  textDecoration: 'none',
+                }}
+                  onMouseEnter={(e) => e.target.style.opacity = '1'}
+                  onMouseLeave={(e) => e.target.style.opacity = '0.7'}
+                >
+                  {t.footer.support.items[link.key]}
+                </Link>
               ))}
-            </ul>
+            </div>
           </motion.div>
-        </div>
 
           {/* 版權信息 */}
           <motion.div

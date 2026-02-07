@@ -280,17 +280,16 @@ export const en = {
     sections: [
       {
         heading: '1. Terms of Service',
-        content: 'Add terms of service content here...',
+        content: `Add terms of service content here...`,
       },
       {
         heading: '2. User Responsibilities',
-        content: 'Add user responsibilities content here...',
+        content: `Add user responsibilities content here...`,
       },
       {
         heading: '3. Account Security',
-        content: 'Add account security content here...',
+        content: `Add account security content here...`,
       },
-      // Add more sections as needed...
     ],
   },
 
@@ -301,17 +300,16 @@ export const en = {
     sections: [
       {
         heading: '1. Data Collection',
-        content: 'Add data collection content here...',
+        content: `Add data collection content here...`,
       },
       {
         heading: '2. Data Usage',
-        content: 'Add data usage content here...',
+        content: `Add data usage content here...`,
       },
       {
         heading: '3. Data Protection',
-        content: 'Add data protection content here...',
+        content: `Add data protection content here...`,
       },
-      // Add more sections as needed...
     ],
   },
 
@@ -322,17 +320,16 @@ export const en = {
     sections: [
       {
         heading: 'Contact Us',
-        content: 'If you have any questions or suggestions, please contact us through:',
+        content: `If you have any questions or suggestions, please contact us through:`,
       },
       {
         heading: 'Email',
-        content: 'support@doget.app',
+        content: `support@doget.app`,
       },
       {
         heading: 'Response Time',
-        content: 'We will respond to your message within 1-3 business days.',
+        content: `We will respond to your message within 1-3 business days.`,
       },
-      // Add more sections as needed...
     ],
   },
 }

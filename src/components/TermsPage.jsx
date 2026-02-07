@@ -75,14 +75,16 @@ const TermsPage = () => {
           >
             {t.termsPage.sections.map((section, index) => (
               <div key={index} style={{ marginBottom: index < t.termsPage.sections.length - 1 ? '30px' : 0 }}>
-                <h2 style={{
-                  fontSize: '20px',
-                  fontWeight: '600',
-                  color: 'white',
-                  marginBottom: '12px',
-                }}>
-                  {section.heading}
-                </h2>
+                {section.heading && (
+                  <h2 style={{
+                    fontSize: '20px',
+                    fontWeight: '600',
+                    color: 'white',
+                    marginBottom: '12px',
+                  }}>
+                    {section.heading}
+                  </h2>
+                )}
                 <p style={{
                   color: 'rgba(255, 255, 255, 0.85)',
                   fontSize: '16px',
