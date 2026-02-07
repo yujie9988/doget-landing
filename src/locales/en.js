@@ -83,11 +83,13 @@ export const en = {
     others: 'Other Apps',
     features: {
       location: 'Real location-based matching',
-      filterFake: 'Automatic fake account filtering',
+      filterFake: 'Filtering fake accounts through matching mechanism',
       realUsers: 'Ensures real user presence',
       interests: 'Common interest filtering',
       report: 'Report and ban system',
       chat: 'Real-time chat',
+      eventVerification: 'In-person event verification',
+      groupChat: 'Store-type group chat rooms',
     },
     highlights: {
       classmate: {
@@ -229,7 +231,6 @@ export const en = {
         { title: 'Smart Location', desc: 'Background tracking & weather' },
         { title: 'Safety Protection', desc: 'Multi-verification & report system' },
         { title: 'Temporary Friends', desc: 'Innovative temporary chat' },
-        { title: 'FCM Push', desc: 'Offline message notifications' },
       ],
     },
   },
@@ -260,19 +261,78 @@ export const en = {
   // Footer
   footer: {
     description: 'DoGet - A smart social platform based on locations, helping you naturally meet new friends at familiar places.',
-    product: {
-      title: 'Product',
-      items: ['DoGet Matching', 'Real-time Chat', 'KTV Community', 'Achievement System'],
-    },
-    company: {
-      title: 'Company',
-      items: ['About Us', 'Contact Us', 'Privacy Policy', 'Terms of Service'],
-    },
     support: {
       title: 'Support',
-      items: ['Help Center', 'FAQ', 'User Feedback', 'Safety Center'],
+      items: {
+        terms: 'Terms of Service',
+        privacy: 'Privacy Policy',
+        feedback: 'User Feedback',
+      },
     },
     copyright: '© 2025 DoGet. All rights reserved.',
-    madeWith: 'Made with ❤️ for better connections',
+    madeWith: 'Made with love for better connections',
+  },
+
+  // Terms Page
+  termsPage: {
+    title: 'Terms of Service',
+    subtitle: 'Please read the following terms carefully',
+    sections: [
+      {
+        heading: '1. Terms of Service',
+        content: 'Add terms of service content here...',
+      },
+      {
+        heading: '2. User Responsibilities',
+        content: 'Add user responsibilities content here...',
+      },
+      {
+        heading: '3. Account Security',
+        content: 'Add account security content here...',
+      },
+      // Add more sections as needed...
+    ],
+  },
+
+  // Privacy Page
+  privacyPage: {
+    title: 'Privacy Policy',
+    subtitle: 'How we protect your privacy',
+    sections: [
+      {
+        heading: '1. Data Collection',
+        content: 'Add data collection content here...',
+      },
+      {
+        heading: '2. Data Usage',
+        content: 'Add data usage content here...',
+      },
+      {
+        heading: '3. Data Protection',
+        content: 'Add data protection content here...',
+      },
+      // Add more sections as needed...
+    ],
+  },
+
+  // Feedback Page
+  feedbackPage: {
+    title: 'User Feedback',
+    subtitle: 'We value your opinions',
+    sections: [
+      {
+        heading: 'Contact Us',
+        content: 'If you have any questions or suggestions, please contact us through:',
+      },
+      {
+        heading: 'Email',
+        content: 'support@doget.app',
+      },
+      {
+        heading: 'Response Time',
+        content: 'We will respond to your message within 1-3 business days.',
+      },
+      // Add more sections as needed...
+    ],
   },
 }

@@ -101,6 +101,8 @@ const ComparisonSection = () => {
               { feature: t.comparisonSection.features.interests, doget: true, others: false },
               { feature: t.comparisonSection.features.report, doget: true, others: true },
               { feature: t.comparisonSection.features.chat, doget: true, others: true },
+              { feature: t.comparisonSection.features.eventVerification, doget: true, others: false },
+              { feature: t.comparisonSection.features.groupChat, doget: true, others: false },
             ].map((item, index) => (
               <React.Fragment key={index}>
                 <motion.div
