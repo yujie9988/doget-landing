@@ -279,7 +279,7 @@ export const zhTW = {
     sections: [
       {
         heading: '',
-        content: `用戶協議 最後更新日期：2026年2月17日`,
+        content: `用戶協議 最後更新日期：2026年1月1日`,
       },
       {
         heading: '',
