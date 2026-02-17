@@ -351,16 +351,52 @@ Third-Party Open-Source Software Packages: This Service also integrates various 
     subtitle: 'How we protect your privacy',
     sections: [
       {
-        heading: '1. Data Collection',
-        content: `Add data collection content here...`,
+        heading: '',
+        content: `Privacy Policy Last Updated: January 1, 2026`,
       },
       {
-        heading: '2. Data Usage',
-        content: `Add data usage content here...`,
+        heading: '1. Information Collection',
+        content: `When you register for an account and use this Service, we may collect the following information that you voluntarily provide: Account Information, including your username, email address, password, nickname, and avatar; Profile Information, including your gender, date of birth, bio, and fitness preferences; Contact Information, including your phone number; and Payment Information, including purchase history (we do not directly store your credit card information). When you use this Service, we may automatically collect the following information: Device Information, including your device model, operating system, unique device identifier, and IP address; Location Information: with your authorization, we will collect your precise or approximate location information. If you use the workout tracking feature, to ensure the system can continuously and completely map your route and calculate the distance, we may continue to collect your location data even when the App is running in the background (e.g., when the screen is locked or when you are using other apps) to complete the track recording; Usage Information, including access times, features used, and in-app activity logs; Log Information, including access times, pages viewed, and error/crash reports. If you choose to log in via a third-party account, we may receive relevant information provided by that third party, including your username, email address, and avatar.`,
       },
       {
-        heading: '3. Data Protection',
-        content: `Add data protection content here...`,
+        heading: '2. Use of Information',
+        content: `We use the collected information for the following purposes: Providing Services, including creating and managing your account, providing the services and features you request, and processing transactions; Improving Services, including analyzing usage, diagnosing technical issues, developing new features, and conducting research and analytics; Personalized Experience, including customizing content and recommendations based on your preferences to provide a personalized user experience; Social Features, including helping you connect with other users, displaying nearby users, and facilitating user interactions; Communication, including sending service-related notifications, responding to your inquiries and requests, and sending promotional information; Security, including verifying identity, detecting and preventing fraud, abuse, and security threats, and maintaining the security of the Service; Legal Compliance, including complying with applicable laws and regulations, responding to legal requests, and protecting our rights and interests. We will only retain your personal data for the period necessary to fulfill the purposes of collection, unless otherwise required by law. Special Protection for Health and Fitness Data: If the Service integrates with Apple HealthKit, Google Fit, or other system-level health databases (hereinafter referred to as "Health Data"), we strictly promise: We will never use your Health Data for marketing, advertising, or sell it to any third-party data brokers. Your Health Data will solely be used to present your workout records and analysis within the App to provide the core functionality of the Service.`,
+      },
+            {
+        heading: '3. Information Sharing',
+        content: `We promise not to sell, rent, or trade your personal data to third parties. We may share your information under the following circumstances: with your consent, we may share your information with third parties; we may share information with third-party service providers who assist us in providing the Service, such as cloud storage, payment processing, and data analytics, provided that these service providers are bound by strict confidentiality obligations; if we are involved in a merger, acquisition, asset sale, or bankruptcy, your information may be transferred as part of the transaction, and we will notify you before any such transfer occurs; we may disclose your information if required by law, requested by government authorities, or to protect our rights, user safety, or public safety; we may share aggregated or anonymized data with third parties, from which your identity cannot be reasonably ascertained. Some of your information may be visible to other users, depending on your privacy settings.`,
+      },
+            {
+        heading: '4. Information Storage and Security',
+        content: `Your information may be stored on our servers located globally. We implement appropriate security measures to protect your information, regardless of where it is stored. We will retain your information for the period necessary to fulfill the purposes outlined in this Policy. After account deletion, we may retain certain information for purposes such as legal compliance, dispute resolution, or enforcing our agreements. We employ various technical and organizational measures to safeguard your information, including data encryption in transit and at rest, access controls and authentication, regular security audits, and employee security training. Despite our reasonable security measures, no method of transmission or storage is absolutely secure. In the event of a data breach, we will notify you and the relevant regulatory authorities as required by applicable laws.`,
+      },
+            {
+        heading: '5. Your Rights',
+        content: `In accordance with applicable data protection laws, you possess the following rights: Right to Access, allowing you to request access to the personal data we hold about you; Right to Rectification, allowing you to request the correction of inaccurate or incomplete personal data; Right to Erasure (Right to Deletion), allowing you to request the deletion of your personal data or account. You may choose to "Delete Account" at any time on the "Settings" page within the App. If you have already uninstalled the Application, you may also request the deletion of your account and data at any time by sending an email to privacy@doget.app. Once deleted, your account information and workout records will be permanently removed or anonymized and cannot be recovered; Right to Restriction of Processing, allowing you to request a limit on the processing of your personal data under certain circumstances; Right to Data Portability, allowing you to obtain the data you provided to us; Right to Object, allowing you to object to our processing of your personal data under certain circumstances; Right to Withdraw Consent, allowing you to withdraw your consent at any time in your device's system settings if we process your data based on your consent (such as location permissions).`,
+      },
+            {
+        heading: '6. Cookies and Tracking Technologies',
+        content: `We may use the following technologies to collect information and improve the Service: Cookies, which are small data files stored on your device; Similar Technologies, including web beacons, pixel tags, and SDKs; and Analytics Tools, used to understand how users interact with our Service. These technologies are used to maintain your login status, remember your preference settings, analyze and improve the Service, provide personalized content and advertisements, and prevent fraud and security threats. Most devices and browsers allow you to control Cookies and similar technologies. You may choose to refuse Cookies, but this may affect the availability and functionality of certain features of the Service.`,
+      },
+            {
+        heading: '7. Third-Party Services',
+        content: `This Service may contain links to third-party websites or services. We are not responsible for the privacy practices of these third parties. Please review their respective privacy policies before providing any information to them. If you choose to log in using a third-party account, you authorize us to obtain certain information from that third party; please refer to that third party's privacy policy for more details. If you use the social sharing features of this Service, the information you share may be visible to others and is subject to the privacy policy of the respective social platform. We may use third-party services to provide certain functionalities; these services may collect your information. We carefully select reputable service providers and require them to adhere to appropriate data protection standards.`,
+      },
+            {
+        heading: '8. Children`s Privacy',
+        content: `This Service is not directed to individuals under the age of 13 or the local legal age of majority. We do not knowingly collect personal data from such users. If you are a parent or guardian and discover that your child has provided us with personal data without your consent, please contact us immediately. We will take steps to remove such data from our systems. If we become aware that we have inadvertently collected personal data from a minor, we will delete it immediately, unless we are legally required to retain it.`,
+      },
+            {
+        heading: '9. Cross-Border Data Transfer',
+        content: `Your information may be transferred to, processed, and stored on servers located outside of your country or region. The data protection laws in these countries or regions may differ from those in your jurisdiction. When we transfer your information to other countries or regions, we will ensure that it is protected in accordance with this Policy and applicable laws. We may take measures such as entering into appropriate contractual clauses with the data recipient, ensuring the recipient's country has an adequate level of data protection, or adopting other legally recognized safeguards. By using this Service, you consent to the transfer of your information to other countries or regions for processing.`,
+      },
+            {
+        heading: '10. Policy Updates',
+        content: `We may update this Policy from time to time. The updated Policy will be posted within this Application and will become effective upon posting. If we make material changes to this Policy, we will notify you by displaying a notice within the Application, sending an email to your registered email address, or through other appropriate means. Your continued use of the Service after the Policy updates implies your acceptance of the revised Policy. If you do not agree to the updated Policy, please cease using the Service.`,
+      },
+            {
+        heading: '11. Contact Us',
+        content: `If you have any questions, comments, or complaints regarding this Policy or our privacy practices, please contact us at privacy@doget.app. We will respond to your request within a reasonable timeframe upon receipt. If you are unsatisfied with how we handle your complaint, you may have the right to lodge a complaint with the data protection supervisory authority in your country or region.`,
       },
     ],
   },
