@@ -300,7 +300,7 @@ export const en = {
       },
       {
         heading: '4. Intellectual Property',
-        content: `All content within the Service, including but not limited to software, code, interface design, trademarks, logos, graphics, images, text, audio, video, and combinations thereof, is protected by copyright law, trademark law, and other relevant laws and regulations. The intellectual property rights of the aforementioned content belong to us or our licensors. Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to use the Service solely for your personal, non-commercial use. Except for the rights explicitly granted in these Terms, we reserve all other rights. Without our prior written consent, you may not: copy, modify, adapt, or translate any part of the Service; reverse engineer, decompile, or otherwise attempt to derive the source code of the Service; remove, obscure, or alter any copyright notices, trademarks, or other proprietary rights notices in the Service; or use any part of the Service to create derivative works or competitive products. If you provide us with any feedback, suggestions, or ideas, you agree that we may use, disclose, reproduce, and modify such feedback without restriction and without any compensation to you.Copyright Infringement Claims : This platform respects the intellectual property rights of others. If you believe that any user content within this Service infringes upon your lawful copyright, please contact us via our support email (e.g., support@doget.com) and provide relevant proof of rights along with the infringing content's location. Upon receiving a copyright infringement notice that complies with legal requirements, we will promptly remove or disable access to the allegedly infringing content to fulfill our platform's safe harbor obligations.`,
+        content: `All content within the Service, including but not limited to software, code, interface design, trademarks, logos, graphics, images, text, audio, video, and combinations thereof, is protected by copyright law, trademark law, and other relevant laws and regulations. The intellectual property rights of the aforementioned content belong to us or our licensors. Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to use the Service solely for your personal, non-commercial use. Except for the rights explicitly granted in these Terms, we reserve all other rights. Without our prior written consent, you may not: copy, modify, adapt, or translate any part of the Service; reverse engineer, decompile, or otherwise attempt to derive the source code of the Service; remove, obscure, or alter any copyright notices, trademarks, or other proprietary rights notices in the Service; or use any part of the Service to create derivative works or competitive products. If you provide us with any feedback, suggestions, or ideas, you agree that we may use, disclose, reproduce, and modify such feedback without restriction and without any compensation to you.Copyright Infringement Claims : This platform respects the intellectual property rights of others. If you believe that any user content within this Service infringes upon your lawful copyright, please contact us via our support email (e.g., support@dogetsocial.com) and provide relevant proof of rights along with the infringing content's location. Upon receiving a copyright infringement notice that complies with legal requirements, we will promptly remove or disable access to the allegedly infringing content to fulfill our platform's safe harbor obligations.`,
       },
       {
         heading: '5. User Content',
@@ -372,7 +372,7 @@ Third-Party Open-Source Software Packages: This Service also integrates various 
       },
             {
         heading: '5. Your Rights',
-        content: `In accordance with applicable data protection laws, you possess the following rights: Right to Access, allowing you to request access to the personal data we hold about you; Right to Rectification, allowing you to request the correction of inaccurate or incomplete personal data; Right to Erasure (Right to Deletion), allowing you to request the deletion of your personal data or account. You may choose to "Delete Account" at any time on the "Settings" page within the App. If you have already uninstalled the Application, you may also request the deletion of your account and data at any time by sending an email to privacy@doget.app. Once deleted, your account information and workout records will be permanently removed or anonymized and cannot be recovered; Right to Restriction of Processing, allowing you to request a limit on the processing of your personal data under certain circumstances; Right to Data Portability, allowing you to obtain the data you provided to us; Right to Object, allowing you to object to our processing of your personal data under certain circumstances; Right to Withdraw Consent, allowing you to withdraw your consent at any time in your device's system settings if we process your data based on your consent (such as location permissions).`,
+        content: `In accordance with applicable data protection laws, you possess the following rights: Right to Access, allowing you to request access to the personal data we hold about you; Right to Rectification, allowing you to request the correction of inaccurate or incomplete personal data; Right to Erasure (Right to Deletion), allowing you to request the deletion of your personal data or account. You may choose to "Delete Account" at any time on the "Settings" page within the App. If you have already uninstalled the Application, you may also request the deletion of your account and data at any time by sending an email to privacy@dogetsocial.com. Once deleted, your account information and workout records will be permanently removed or anonymized and cannot be recovered; Right to Restriction of Processing, allowing you to request a limit on the processing of your personal data under certain circumstances; Right to Data Portability, allowing you to obtain the data you provided to us; Right to Object, allowing you to object to our processing of your personal data under certain circumstances; Right to Withdraw Consent, allowing you to withdraw your consent at any time in your device's system settings if we process your data based on your consent (such as location permissions).`,
       },
             {
         heading: '6. Cookies and Tracking Technologies',
@@ -396,28 +396,10 @@ Third-Party Open-Source Software Packages: This Service also integrates various 
       },
             {
         heading: '11. Contact Us',
-        content: `If you have any questions, comments, or complaints regarding this Policy or our privacy practices, please contact us at privacy@doget.app. We will respond to your request within a reasonable timeframe upon receipt. If you are unsatisfied with how we handle your complaint, you may have the right to lodge a complaint with the data protection supervisory authority in your country or region.`,
+        content: `If you have any questions, comments, or complaints regarding this Policy or our privacy practices, please contact us at privacy@dogetsocial.com. We will respond to your request within a reasonable timeframe upon receipt. If you are unsatisfied with how we handle your complaint, you may have the right to lodge a complaint with the data protection supervisory authority in your country or region.`,
       },
     ],
   },
 
-  // Feedback Page
-  feedbackPage: {
-    title: 'User Feedback',
-    subtitle: 'We value your opinions',
-    sections: [
-      {
-        heading: 'Contact Us',
-        content: `If you have any questions or suggestions, please contact us through:`,
-      },
-      {
-        heading: 'Email',
-        content: `support@doget.app`,
-      },
-      {
-        heading: 'Response Time',
-        content: `We will respond to your message within 1-3 business days.`,
-      },
-    ],
-  },
+
 }
