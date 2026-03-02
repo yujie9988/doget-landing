@@ -12,7 +12,6 @@ const Footer = () => {
   const supportLinks = [
     { key: 'terms', path: '/terms' },
     { key: 'privacy', path: '/privacy' },
-    { key: 'feedback', path: '/feedback' },
   ]
 
   return (

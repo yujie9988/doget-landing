@@ -265,7 +265,6 @@ export const zhTW = {
       items: {
         terms: '用戶協議',
         privacy: '隱私政策',
-        feedback: '用戶反饋',
       },
     },
     copyright: '© 2026 DoGet. 版權所有。',

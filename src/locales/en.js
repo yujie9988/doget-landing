@@ -266,7 +266,6 @@ export const en = {
       items: {
         terms: 'Terms of Service',
         privacy: 'Privacy Policy',
-        feedback: 'User Feedback',
       },
     },
     copyright: '© 2026 DoGet. All rights reserved.',
